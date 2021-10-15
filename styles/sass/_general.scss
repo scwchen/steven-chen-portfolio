@@ -1,0 +1,38 @@
+/* ===========================================
+GENERAL STYLINGS
+=========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+    font-size: 125%;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: $backgroundColorMain;
+    color: $fontColorMain;
+}
+.wrapper {
+    width: 90%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $fontColorMain;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+* {
+    outline: 1px solid red;
+}
