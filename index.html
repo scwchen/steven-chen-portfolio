@@ -11,31 +11,56 @@
 </head>
 
 <body>
-    <header>
-        <div class="wrapper">
-            <div class="headerNav">
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">What I Do</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
+    <div class="wrapper main-content">
+        <header>
+            <div class="wrapper">
+                <div class="header-nav-container">
+                    <nav class="header-nav">
+                        <div class="header-nav-hero">
+                            <img src="./assets/hero-test.jpg" alt="Steven Chen, front end web developer.">
+                            <h1>Steven Chen</h1>
+                        </div>
+                        <ul class="header-nav-list">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">What I Do</a></li>
+                            <li><a href="#resume">Resume</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                        <div class="header-nav-favicon">
+                            <ul class="header-nav-favicon-list">
+                                <li><a href="https://www.linkedin.com/in/scwchen/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://github.com/scwchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
+                                <li><a href="https://twitter.com/schen05" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://medium.com/@scwchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium-m"></i></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <main>
+        <main>
 
-        <div class="wrapper">
+            <section class="home" id="home">
+                <div class="home-header-container overlay">
+                    <p>Welcome</p>
+                    <h2>I'm Steven Chen</h2>
+                    <p>based in Toronto, Canada</p>
+                    <a href="#contact">Hire Me</a>
+                </div>
+            </section>
 
-            <section class="home" id="home"></section>
             <section class="about" id="about">
-                <h2>About Me</h2>
-                <p>Get to Know Me</p>
+                <div class="about-header-container">
+                    <h2>About Me</h2>
+                    <p>Get to Know Me</p>
+                </div>
+                <div class="about-summary">
+                    <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
+                </div>
+
             </section>
 
             <section class="services" id="services">
@@ -66,22 +91,22 @@
                 <div class="address">
 
                 </div>
-                <div class="contactInput">
-                    <form class="contactForm">
+                <div class="contact-input">
+                    <form class="contact-form">
                     </form>
 
                 </div>
             </section>
 
-            <div class="toTop">
+            <div class="to-top">
 
             </div>
-        </div>
-    </main>
-    <footer>
-        <p>Copyright Steven Chen 2021 </p>
-    </footer>
+        </main>
+        <footer>
+            <p>Created by Steven Chen 2021 </p>
+        </footer>
 
+    </div>
 </body>
 
 </html>

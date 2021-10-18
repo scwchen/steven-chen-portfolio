@@ -255,6 +255,11 @@ html {
 body {
   background-color: #2b2f31;
   color: #fff;
+  position: relative;
+}
+
+.wrapper.main-content {
+  margin-left: 250px;
 }
 
 .wrapper {
@@ -265,6 +270,8 @@ body {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -277,10 +284,116 @@ img {
   display: block;
 }
 
-* {
-  outline: 1px solid red;
-}
-
 /* ===========================================
 TYPOGRAPHY
 =========================================== */
+/* ===========================================
+HEADER
+=========================================== */
+header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+  z-index: 100;
+  background-color: #111418;
+}
+
+.header-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.header-nav-hero img {
+  margin: 1rem 0;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 0px 5px #585858;
+          box-shadow: 0px 0px 0px 5px #585858;
+}
+
+.header-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100vh;
+}
+.header-nav h1 {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.header-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav-favicon-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-nav-favicon-list li {
+  margin: 0.5rem;
+}
+
+/* ===========================================
+HOME
+=========================================== */
+.home {
+  position: relative;
+  height: 100vh;
+  background-image: url("../../assets/hero-background-test.jpg");
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* ===========================================
+FOOTER
+=========================================== */
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0;
+}
+footer p {
+  text-align: center;
+}

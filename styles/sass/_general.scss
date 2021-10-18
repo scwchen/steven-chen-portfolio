@@ -10,9 +10,15 @@ html {
 }
 
 body {
-    background-color: $backgroundColorMain;
-    color: $fontColorMain;
+    background-color: $background-color-main;
+    color: $font-color-main;
+    position: relative;
 }
+
+.wrapper.main-content {
+    margin-left: 250px;
+}
+
 .wrapper {
     width: 90%;
     max-width: 1600px;
@@ -21,18 +27,16 @@ body {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
-    color: $fontColorMain;
+    color: $font-color-main;
 }
 
 img {
     max-width: 100%;
     display: block;
-}
-
-* {
-    outline: 1px solid red;
 }
