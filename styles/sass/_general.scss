@@ -16,10 +16,13 @@ body {
     position: relative;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     text-align: center;
 }
-.wrapper.main-content {
+
+.wrapper-main-content {
     margin-left: 250px;
     width: calc(100% - 250px);
 }
@@ -92,6 +95,10 @@ section {
     padding: 1rem;
     border-radius: 100%;
     background-color: rgba(128, 128, 128, 1);
+    &:hover {
+        transition: all 0.3s;
+        background-color: rgba(128, 128, 128, 0.5);
+    }
     &.hidden {
         display: none;
     }
@@ -101,4 +108,57 @@ section {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+}
+
+.nav-button-tooltip {
+    visibility: hidden;
+    // color: white;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+
+.text-content {
+    text-align: center;
+}
+
+
+
+// Firefox
+* {
+    scrollbar-color: $accent-color $background-color-main;
+}
+
+// For Chrome, Edge, and Safari
+*::-webkit-scrollbar {
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: $background-color-main;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+    border-radius: 100vw;
+    border: 3px solid $background-color-main
+}
+
+
+.hollow-button {
+    color: $accent-color;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 2px solid $accent-color;
+    &:hover {
+        transition: all 0.3s;
+        background-color: $accent-color;
+        border-color: $accent-color;
+        color: white;
+    }
+}
+
+button {
+    background: none;
+    cursor: pointer;
 }

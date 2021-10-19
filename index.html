@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Chen</title>
+    <title>Steven Chen - Work in Progress</title>
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
     <script src="./script.js"></script>
 </head>
 
 <body>
-    <div class="wrapper main-content">
+    <div class="wrapper-main-content">
         <header>
             <div class="wrapper">
                 <div class="header-nav-container">
@@ -44,7 +44,7 @@
                     </nav>
                 </div>
             </div>
-        </header>
+        </header> <!-- end of header -->
 
         <main>
             <section class="home" id="home">
@@ -53,10 +53,10 @@
                         <p>Welcome</p>
                         <h2>I'm <span class="typewriter">Steven Chen</span></h2>
                         <p>based in Toronto, Canada</p>
-                        <a class="hire-button" href="#contact">Hire Me</a>
+                        <a class="hire-button hollow-button" href="#contact">Hire Me</a>
                     </div>
                 </div>
-            </section>
+            </section> <!-- end of home -->
 
             <section class="about" id="about">
                 <div class="wrapper">
@@ -66,7 +66,8 @@
                     </div>
                     <div class="about-text">
                         <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et optio nesciunt non, nemo
+                        <p class="text-content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et optio
+                            nesciunt non, nemo
                             voluptates consequatur quibusdam. Blanditiis reiciendis tenetur error, iusto quae placeat
                             laudantium dolorem natus provident sit accusamus illo, voluptatibus consectetur ratione qui
                             sint doloribus modi sequi at consequatur ab facilis totam commodi eveniet. Natus iure,
@@ -76,7 +77,7 @@
                     </div>
                 </div>
 
-            </section>
+            </section> <!-- end of about -->
 
             <section class="skills" id="skills">
                 <div class="wrapper">
@@ -84,8 +85,11 @@
                         <h2 class="section-heading">Skills</h2>
                         <p class="section-sub-heading">What I Do?</p>
                     </div>
+                    <div class="skills-text">
+                        <p class="text-content">I do some shit. 🕶</p>
+                    </div>
                 </div>
-            </section>
+            </section> <!-- end of skills -->
 
             <section class="resume" id="resume">
                 <div class="wrapper">
@@ -96,12 +100,15 @@
                     <ul class="education">
                         <li>Education 1</li>
                         <li>Education 1</li>
-                        <li>Education 1</li>
-                        <li>Education 1</li>
                     </ul>
-                    <a class="resume-button" href="./assets/Steven Chen Web Developer Resume.pdf" download rel="noopener noreferrer">Download My CV</a>
+                    <ul class="experience">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <a class="resume-button hollow-button" href="./assets/Steven Chen Web Developer Resume.pdf" download
+                        rel="noopener noreferrer">Download My CV</a>
                 </div>
-            </section>
+            </section> <!-- end of resume -->
 
             <section class="projects" id="projects">
                 <div class="wrapper">
@@ -109,9 +116,12 @@
                         <h2 class="section-heading">Projects</h2>
                         <p class="section-sub-heading">My Work</p>
                     </div>
+                    <div class="project-content">
+                        <button class="project-button hollow-button">Show me a project</button>
+                    </div>
                 </div>
 
-            </section>
+            </section> <!-- end of projects -->
 
             <section class="contact" id="contact">
                 <div class="address">
@@ -120,22 +130,32 @@
                 <div class="contact-input">
                     <form class="contact-form">
                     </form>
-
                 </div>
-            </section>
+            </section> <!-- end of contact -->
+
+        </main> <!-- end of main -->
 
 
-        </main>
         <footer>
-            <p>Created by Steven Chen 2021 </p>
-        </footer>
-    </div>
+            <p>Created by Steven Chen 2021</p>
+        </footer> <!-- end of footer -->
+    </div> <!-- end of wrapper-main-content -->
 
     </div>
     <!-- Navigation button -->
-    <a class="to-top hidden" href="#home">
-        <i class="fas fa-chevron-up"></i>
-    </a>
+    <div class="nav-button">
+        <a class="to-top hidden" href="#home">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <span class="nav-button-tooltip">Back to Top</span>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal hidden">
+        <div class="project-modal">
+            <button class="close-modal">X</button>
+        </div>
+    </div>
 
 </body>
 

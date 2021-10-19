@@ -1,0 +1,23 @@
+/* ===========================================
+MODAL
+=========================================== */
+
+.modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    &.hidden {
+        display: none;
+    }
+    .project-modal {
+        background: white;
+        box-shadow: 0px 0px 2px 2px #000;
+        height: 80%;
+        width: 80%;
+        margin: 10%;
+    }
+}
