@@ -250,16 +250,20 @@ GENERAL STYLINGS
 html {
   font-size: 125%;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: #2b2f31;
-  color: #fff;
   position: relative;
+}
+
+h1, h2, h3 {
+  text-align: center;
 }
 
 .wrapper.main-content {
   margin-left: 250px;
+  width: calc(100% - 250px);
 }
 
 .wrapper {
@@ -284,9 +288,74 @@ img {
   display: block;
 }
 
+.accent-color {
+  color: #0dcaf0;
+}
+
+section {
+  position: relative;
+}
+
+.heading-container {
+  margin: 2% 0;
+}
+
+.section-heading {
+  position: absolute;
+  text-transform: uppercase;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: rgba(211, 211, 211, 0.3);
+  font-size: 5rem;
+  letter-spacing: 3px;
+}
+
+.section-sub-heading {
+  position: relative;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 6rem;
+}
+.section-sub-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 4px;
+  width: 5rem;
+  background-color: #0dcaf0;
+}
+
+.to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  padding: 1rem;
+  border-radius: 100%;
+  background-color: gray;
+}
+.to-top.hidden {
+  display: none;
+}
+.to-top i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
 /* ===========================================
 TYPOGRAPHY
 =========================================== */
+.header,
+.home {
+  color: #fff;
+}
+
 /* ===========================================
 HEADER
 =========================================== */
@@ -313,15 +382,7 @@ header {
           align-items: center;
   padding: 1rem;
 }
-
-.header-nav-hero img {
-  margin: 1rem 0;
-  border-radius: 100%;
-  -webkit-box-shadow: 0px 0px 0px 5px #585858;
-          box-shadow: 0px 0px 0px 5px #585858;
-}
-
-.header-nav {
+.header-nav-container .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -336,10 +397,19 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100vh;
+  padding: 2rem 0;
 }
-.header-nav h1 {
+
+.header-nav-hero h1 {
+  color: #fff;
   text-align: center;
   font-size: 1.3rem;
+}
+.header-nav-hero img {
+  margin: 1rem 0;
+  border-radius: 100%;
+  -webkit-box-shadow: 0px 0px 0px 5px #585858;
+          box-shadow: 0px 0px 0px 5px #585858;
 }
 
 .header-nav-list {
@@ -354,6 +424,14 @@ header {
       -ms-flex-align: center;
           align-items: center;
 }
+.header-nav-list li {
+  padding: 1rem;
+}
+.header-nav-list li a:hover {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #0dcaf0;
+}
 
 .header-nav-favicon-list {
   display: -webkit-box;
@@ -363,6 +441,11 @@ header {
 .header-nav-favicon-list li {
   margin: 0.5rem;
 }
+.header-nav-favicon-list li a:hover {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #0dcaf0;
+}
 
 /* ===========================================
 HOME
@@ -371,6 +454,9 @@ HOME
   position: relative;
   height: 100vh;
   background-image: url("../../assets/hero-background-test.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .overlay {
@@ -380,6 +466,45 @@ HOME
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.home-heading-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.home-heading-container h2 {
+  font-size: 3rem;
+}
+.home-heading-container p {
+  font-size: 1.4rem;
+}
+.home-heading-container > * {
+  margin: 0.7rem 0;
+}
+
+.hire-button {
+  color: #0dcaf0;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  border: 2px solid #0dcaf0;
+}
+
+.resume-button {
+  color: #0dcaf0;
+  padding: 0.7rem 1rem;
+  border-radius: 50px;
+  border: 2px solid #0dcaf0;
 }
 
 /* ===========================================

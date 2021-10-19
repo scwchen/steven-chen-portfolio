@@ -8,6 +8,7 @@
     <title>Steven Chen</title>
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -30,10 +31,14 @@
                         </ul>
                         <div class="header-nav-favicon">
                             <ul class="header-nav-favicon-list">
-                                <li><a href="https://www.linkedin.com/in/scwchen/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="https://github.com/scwchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
-                                <li><a href="https://twitter.com/schen05" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://medium.com/@scwchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-medium-m"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/scwchen/" target="_blank"
+                                        rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://github.com/scwchen" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-github"></i></a></li>
+                                <li><a href="https://twitter.com/schen05" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://medium.com/@scwchen" target="_blank" rel="noopener noreferrer"><i
+                                            class="fab fa-medium-m"></i></a></li>
                             </ul>
                         </div>
                     </nav>
@@ -42,49 +47,70 @@
         </header>
 
         <main>
-
             <section class="home" id="home">
-                <div class="home-header-container overlay">
-                    <p>Welcome</p>
-                    <h2>I'm Steven Chen</h2>
-                    <p>based in Toronto, Canada</p>
-                    <a href="#contact">Hire Me</a>
+                <div class="wrapper">
+                    <div class="home-heading-container overlay">
+                        <p>Welcome</p>
+                        <h2>I'm <span class="typewriter">Steven Chen</span></h2>
+                        <p>based in Toronto, Canada</p>
+                        <a class="hire-button" href="#contact">Hire Me</a>
+                    </div>
                 </div>
             </section>
 
             <section class="about" id="about">
-                <div class="about-header-container">
-                    <h2>About Me</h2>
-                    <p>Get to Know Me</p>
-                </div>
-                <div class="about-summary">
-                    <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
+                <div class="wrapper">
+                    <div class="heading-container">
+                        <h2 class="section-heading">About Me</h2>
+                        <p class="section-sub-heading">Get to Know Me</p>
+                    </div>
+                    <div class="about-text">
+                        <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et optio nesciunt non, nemo
+                            voluptates consequatur quibusdam. Blanditiis reiciendis tenetur error, iusto quae placeat
+                            laudantium dolorem natus provident sit accusamus illo, voluptatibus consectetur ratione qui
+                            sint doloribus modi sequi at consequatur ab facilis totam commodi eveniet. Natus iure,
+                            perferendis quae officiis pariatur modi suscipit dolorem! Fuga distinctio nobis eum maxime
+                            ea assumenda! Praesentium ducimus deserunt nulla eligendi perspiciatis necessitatibus
+                            mollitia dolorum.</p>
+                    </div>
                 </div>
 
             </section>
 
-            <section class="services" id="services">
-                <h2>Services</h2>
-                <p>What Do I Do?</p>
+            <section class="skills" id="skills">
+                <div class="wrapper">
+                    <div class="heading-container">
+                        <h2 class="section-heading">Skills</h2>
+                        <p class="section-sub-heading">What I Do?</p>
+                    </div>
+                </div>
             </section>
 
             <section class="resume" id="resume">
-                <h2>Summary</h2>
-                <p>Resume</p>
-                <ul class="education">
-                    <li>Education 1</li>
-                    <li>Education 1</li>
-                    <li>Education 1</li>
-                    <li>Education 1</li>
-                </ul>
-                <ul class="skills">
-
-                </ul>
+                <div class="wrapper">
+                    <div class="heading-container">
+                        <h2 class="section-heading">Summary</h2>
+                        <p class="section-sub-heading">Resume</p>
+                    </div>
+                    <ul class="education">
+                        <li>Education 1</li>
+                        <li>Education 1</li>
+                        <li>Education 1</li>
+                        <li>Education 1</li>
+                    </ul>
+                    <a class="resume-button" href="./assets/Steven Chen Web Developer Resume.pdf" download rel="noopener noreferrer">Download My CV</a>
+                </div>
             </section>
 
             <section class="projects" id="projects">
-                <h2>Projects</h2>
-                <p>My Work</p>
+                <div class="wrapper">
+                    <div class="heading-container">
+                        <h2 class="section-heading">Projects</h2>
+                        <p class="section-sub-heading">My Work</p>
+                    </div>
+                </div>
+
             </section>
 
             <section class="contact" id="contact">
@@ -98,15 +124,19 @@
                 </div>
             </section>
 
-            <div class="to-top">
 
-            </div>
         </main>
         <footer>
             <p>Created by Steven Chen 2021 </p>
         </footer>
+    </div>
 
     </div>
+    <!-- Navigation button -->
+    <a class="to-top hidden" href="#home">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
 </body>
 
 </html>

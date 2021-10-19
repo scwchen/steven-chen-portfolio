@@ -2,21 +2,26 @@
 GENERAL STYLINGS
 =========================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 html {
     font-size: 125%;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: $background-color-main;
-    color: $font-color-main;
+    // background-color: $background-color-main;
+    // color: $font-color-main;
     position: relative;
 }
 
+h1, h2, h3 {
+    text-align: center;
+}
 .wrapper.main-content {
     margin-left: 250px;
+    width: calc(100% - 250px);
 }
 
 .wrapper {
@@ -39,4 +44,61 @@ a {
 img {
     max-width: 100%;
     display: block;
+}
+
+.accent-color {
+    color: $accent-color;
+}
+
+section {
+    position: relative;
+}
+
+.heading-container {
+    margin: 2% 0;
+}
+
+.section-heading {
+    position: absolute;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(211, 211, 211, 0.3);
+    font-size: 5rem;
+    letter-spacing: 3px;
+}
+
+.section-sub-heading {
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 6rem;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 5rem;
+        background-color: $accent-color;
+    }
+}
+
+.to-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    padding: 1rem;
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 1);
+    &.hidden {
+        display: none;
+    }
+    i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
