@@ -12,7 +12,8 @@ html {
 
 body {
     position: relative;
-    color: $background-color-main;
+    color: white;
+    background-color: $background-color-secondary;
 }
 
 h1,
@@ -54,10 +55,15 @@ img {
 
 section {
     position: relative;
+    &.tertiary {
+        background-color: $background-color-tertiary;
+    }
+    padding: 3rem 0;
 }
 
+
 .heading-container {
-    margin: 2% 0;
+    margin-bottom: 2rem;
 }
 
 .section-heading {
@@ -76,6 +82,7 @@ section {
     text-align: center;
     font-size: 1.8rem;
     line-height: 6rem;
+    text-shadow: 2px 2px 4px #000;
     &::after {
         content: "";
         position: absolute;
@@ -90,14 +97,17 @@ section {
 
 .to-top {
     position: fixed;
-    right: 40px;
-    bottom: 40px;
+    right: 1rem;
+    bottom: 1rem;
     padding: 1rem;
     border-radius: 100%;
     background-color: rgba(128, 128, 128, 1);
     &:hover {
         transition: all 0.3s;
         background-color: rgba(128, 128, 128, 0.5);
+    }
+    &:hover + .nav-button-tooltip {
+        visibility: visible;
     }
     &.hidden {
         display: none;
@@ -112,10 +122,31 @@ section {
 
 .nav-button-tooltip {
     visibility: hidden;
-    // color: white;
-    position: absolute;
-    bottom: 100px;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 0.5rem;
+    border-radius: 2.5rem;
+    position: fixed;
+    bottom: 0.9rem;
+    right: 4rem;
+}
+
+.toggle-dark {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
     right: 0;
+    top: 10%;
+    i {
+        opacity: 0.2;
+        margin: 0.3rem 0;
+    }
+    padding: 0.2rem 0.3rem;
+    border-radius: 50px;
+    border: 2px solid rgba($accent-color, $alpha: 0.2);
+    color: $accent-color;
+    i.chosen {
+        opacity: 1;
+    }
 }
 
 .text-content {
@@ -168,6 +199,7 @@ button {
     cursor: pointer;
 }
 
+
 .skills-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -191,10 +223,30 @@ button {
     }
     i {
         position: relative;
-        font-size: 5rem;
-        padding: 0.7rem;
+        font-size: 4rem;
+        padding: 1.5rem;
     }
     p {
-        margin: 10% 0;
+        text-align: center;
+        padding: 0.5rem;
+    }
+}
+
+.blinker {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    p {
+        text-align: center;
     }
 }

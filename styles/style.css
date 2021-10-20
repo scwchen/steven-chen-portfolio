@@ -255,7 +255,8 @@ html {
 
 body {
   position: relative;
-  color: #111418;
+  color: white;
+  background-color: #212529;
 }
 
 h1,
@@ -297,10 +298,14 @@ img {
 
 section {
   position: relative;
+  padding: 3rem 0;
+}
+section.tertiary {
+  background-color: #343A40;
 }
 
 .heading-container {
-  margin: 2% 0;
+  margin-bottom: 2rem;
 }
 
 .section-heading {
@@ -310,7 +315,7 @@ section {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  color: rgba(211, 211, 211, 0.3);
+  color: rgba(163, 163, 163, 0.2);
   font-size: 5rem;
   letter-spacing: 3px;
 }
@@ -320,6 +325,7 @@ section {
   text-align: center;
   font-size: 1.8rem;
   line-height: 6rem;
+  text-shadow: 2px 2px 4px #000;
 }
 .section-sub-heading::after {
   content: "";
@@ -335,8 +341,8 @@ section {
 
 .to-top {
   position: fixed;
-  right: 40px;
-  bottom: 40px;
+  right: 1rem;
+  bottom: 1rem;
   padding: 1rem;
   border-radius: 100%;
   background-color: gray;
@@ -345,6 +351,9 @@ section {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   background-color: rgba(128, 128, 128, 0.5);
+}
+.to-top:hover + .nav-button-tooltip {
+  visibility: visible;
 }
 .to-top.hidden {
   display: none;
@@ -359,9 +368,36 @@ section {
 
 .nav-button-tooltip {
   visibility: hidden;
-  position: absolute;
-  bottom: 100px;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 0.5rem;
+  border-radius: 2.5rem;
+  position: fixed;
+  bottom: 0.9rem;
+  right: 4rem;
+}
+
+.toggle-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
   right: 0;
+  top: 10%;
+  padding: 0.2rem 0.3rem;
+  border-radius: 50px;
+  border: 2px solid rgba(13, 202, 240, 0.2);
+  color: #0dcaf0;
+}
+.toggle-dark i {
+  opacity: 0.2;
+  margin: 0.3rem 0;
+}
+.toggle-dark i.chosen {
+  opacity: 1;
 }
 
 .text-content {
@@ -448,11 +484,41 @@ button {
 }
 .skill-container i {
   position: relative;
-  font-size: 5rem;
-  padding: 0.7rem;
+  font-size: 4rem;
+  padding: 1.5rem;
 }
 .skill-container p {
-  margin: 10% 0;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.blinker {
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 0;
+}
+footer p {
+  text-align: center;
 }
 
 /* ===========================================
@@ -553,7 +619,7 @@ HOME
 .home {
   position: relative;
   height: 100vh;
-  background-image: url("../../assets/hero-background-test.jpg");
+  background-image: url("../../assets/hero-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -633,22 +699,79 @@ PROJECTS
 /* ===========================================
 CONTACT
 =========================================== */
-/* ===========================================
-FOOTER
-=========================================== */
-footer {
+.contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 2rem 0;
 }
-footer p {
-  text-align: center;
+.contact h4 {
+  text-transform: uppercase;
 }
 
+.contact-form input,
+.contact-form textarea {
+  background-color: #232a31;
+  border: 2px solid #232a31;
+  border-radius: 5px;
+  height: 3rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+.contact-form textarea {
+  height: 10rem;
+  resize: none;
+}
+.contact-form fieldset {
+  border-radius: 5px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+.contact-form .message-container,
+.contact-form .submit-container,
+.contact-form p {
+  grid-column: 1/-1;
+}
+.contact-form .submit-container {
+  text-align: center;
+}
+.contact-form p {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.contact-me {
+  display: grid;
+}
+
+.follow-me ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.follow-me ul li {
+  padding: 0.5rem;
+}
+.follow-me ul i {
+  color: white;
+}
+.follow-me ul i:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #0dcaf0;
+}
+
+.submit-button {
+  width: 40%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+}
+
+/* ===========================================
+FOOTER
+=========================================== */
 /* ===========================================
 MODAL
 =========================================== */

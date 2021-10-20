@@ -1,3 +1,68 @@
 /* ===========================================
 CONTACT
 =========================================== */
+
+.contact {
+    display: flex;
+    h4 {
+        text-transform: uppercase;
+    }
+}
+
+.contact-form {
+    input,
+    textarea {
+        background-color: $input-color;
+        border: 2px solid $input-color;
+        border-radius: 5px;
+        height: 3rem;
+        width: 100%;
+        padding: 0.5rem;
+    }
+    textarea {
+        height: 10rem;
+        resize: none;
+    }
+    fieldset {
+        border-radius: 5px;
+        padding: 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem 2rem;
+    }
+    .message-container,
+    .submit-container,
+    p {
+        grid-column: 1 / -1;
+    }
+    .submit-container {
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+}
+
+.contact-me {
+    display: grid;
+
+}
+.follow-me ul {
+    display: flex;
+    li {
+        padding: 0.5rem;
+    }
+    i {
+        color: white;
+        &:hover {
+            transition: all 0.5s;
+            color: $accent-color;
+        }
+    }
+}
+
+.submit-button {
+    width: 40%;
+    min-width: fit-content;
+}
