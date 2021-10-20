@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steven Chen - Work in Progress</title>
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link rel="stylesheet" href="./styles/style.css">
-    <script src="./script.js"></script>
+
 </head>
 
 <body>
@@ -85,8 +86,52 @@
                         <h2 class="section-heading">Skills</h2>
                         <p class="section-sub-heading">What I Do?</p>
                     </div>
-                    <div class="skills-text">
-                        <p class="text-content">I do some shit. 🕶</p>
+                    <div class="skills-content">
+                        <div class="skill-container">
+                            <i class="devicon-microsoftsqlserver-plain"></i>
+                            <p>Some shit</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-microsoftsqlserver-plain"></i>
+                            <p>SQL</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-react-original"></i>
+                            <p>React</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-html5-plain"></i>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-css3-plain"></i>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-javascript-plain"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-firebase-plain"></i>
+                            <p>Firebase</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-github-original"></i>
+                            <p>GitHub</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-git-plain"></i>
+
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-sass-original"></i>
+                            <p>SASS</p>
+                        </div>
+                        <div class="skill-container">
+                            <i class="devicon-jquery-plain"></i>
+                            <p>jQuery</p>
+                        </div>
                     </div>
                 </div>
             </section> <!-- end of skills -->
@@ -117,20 +162,80 @@
                         <p class="section-sub-heading">My Work</p>
                     </div>
                     <div class="project-content">
-                        <button class="project-button hollow-button">Show me a project</button>
+
+                        <div class="project-container">
+                            <div class="project-heading">
+                                <h3>Beachstays</h3>
+                                <p>Project 1</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="./assets/beachstays.png" alt="Beachstays P S D conversion project.">
+                            </div>
+                        </div>
+                        <div class="project-container">
+                            <div class="project-heading">
+                                <h3>Cineplus</h3>
+                                <p>Project 2</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="./assets/cineplus-main.png" alt="Cineplus. Paired Java Script project.">
+                            </div>
+                        </div>
+                        <div class="project-container">
+                            <div class="project-heading">
+                                <h3>Routinely</h3>
+                                <p>Project 3</p>
+                            </div>
+                            <div class="project-image">
+                                <img src="./assets/routinely.png" alt="Routinely. Solo React and Fire base project.">
+                            </div>
+                        </div>
+                        <!-- <button class="project-button hollow-button">Show me a project</button> -->
                     </div>
                 </div>
 
             </section> <!-- end of projects -->
 
             <section class="contact" id="contact">
-                <div class="address">
+                <aside class="contactInfo">
+                    <div class="favicons">
+                        <ul>
+                            <li><i class="fab fa-facebook-f"></i></li>
+                            <li><i class="fab fa-instagram"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                            <li><i class="fab fa-whatsapp"></i></li>
+                        </ul>
+                    </div>
+                    <div class="emailAddress">
+                        <a href="mailto:steven.chen.121@email.com" rel="noopener noreferrer">
+                            <h4>steven.chen.121@email.com</h4>
+                        </a>
+                    </div>
+                    <div class="mailingAddress">
+                        <p>519 - 635 - 8820</p>
+                    </div>
+                </aside> <!-- end of contactInfo -->
 
-                </div>
                 <div class="contact-input">
-                    <form class="contact-form">
+                    <h1>Get in Touch</h1>
+
+                    <form id="contact-form" class="contact-form" name="simple-contact-form" accept-charset="utf-8"
+                        action="https://formspree.io/f/xqkwobzp" method="post">
+
+                        <fieldset id="contact-form-inputs">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required>
+                            <label for="email-address">Email Address</label>
+                            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.com"
+                                required>
+                            <label for="message">Message</label>
+                            <textarea rows="5" name="message" id="message" placeholder="Message" required></textarea>
+                            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                        </fieldset>
+                        <button class="submit-button solid-button" type="submit" value="Submit">Submit</button>
                     </form>
                 </div>
+
             </section> <!-- end of contact -->
 
         </main> <!-- end of main -->
@@ -157,6 +262,8 @@
         </div>
     </div>
 
+    <!-- JS script -->
+    <script src="./script.js"></script>
 </body>
 
 </html>

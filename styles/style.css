@@ -255,6 +255,7 @@ html {
 
 body {
   position: relative;
+  color: #111418;
 }
 
 h1,
@@ -304,6 +305,7 @@ section {
 
 .section-heading {
   position: absolute;
+  width: 90%;
   text-transform: uppercase;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -398,9 +400,59 @@ section {
   color: white;
 }
 
+.solid-button {
+  color: white;
+  padding: 0.7rem 1rem;
+  background-color: #0dcaf0;
+  border-radius: 50px;
+  border: 2px solid #0dcaf0;
+}
+
 button {
   background: none;
   cursor: pointer;
+}
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 0 5%;
+}
+
+.skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+.skill-container:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+}
+.skill-container i {
+  position: relative;
+  font-size: 5rem;
+  padding: 0.7rem;
+}
+.skill-container p {
+  margin: 10% 0;
 }
 
 /* ===========================================
@@ -425,13 +477,6 @@ header {
 }
 
 .header-nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -556,6 +601,39 @@ ABOUT
 }
 
 /* ===========================================
+PROJECTS
+=========================================== */
+.project-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.project-container {
+  position: relative;
+  width: 30%;
+}
+.project-container .project-image {
+  opacity: 0.7;
+  -webkit-box-shadow: 0px 0px 2px 2px #000;
+          box-shadow: 0px 0px 2px 2px #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.project-container .project-image img:hover {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+/* ===========================================
+CONTACT
+=========================================== */
+/* ===========================================
 FOOTER
 =========================================== */
 footer {
@@ -590,7 +668,54 @@ MODAL
   background: white;
   -webkit-box-shadow: 0px 0px 2px 2px #000;
           box-shadow: 0px 0px 2px 2px #000;
-  height: 80%;
-  width: 80%;
-  margin: 10%;
+  height: 80vh;
+  width: 80vw;
+  margin: 10vh 10vw;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  header {
+    position: fixed;
+    bottom: unset;
+    left: unset;
+    right: unset;
+    top: unset;
+    width: 100%;
+  }
+
+  .header-nav-container {
+    padding: 0;
+  }
+  .header-nav-container .header-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: auto;
+    padding: 0;
+  }
+
+  .header-nav-hero img {
+    display: none;
+  }
+
+  .header-nav-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: none;
+  }
+
+  .wrapper-main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .skills-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

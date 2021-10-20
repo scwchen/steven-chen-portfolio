@@ -6,9 +6,20 @@ const app = {};
 
 app.stringsToType = ["Steven Chen", "a Freelancer", "a Web-Developer"];
 
+app.init = () => {
+    // do some shit
+    // app.stringsToType.forEach((stringToType) => {
+    //     app.typewriter(stringToType);
+    // });
+    app.navButtonListener();
+    // app.projectModal();
+    app.skillContainerListener();
+};
+
 app.navButtonListener = () => {
+    const toTop = document.querySelector('.to-top');
+    
     window.addEventListener('scroll', () => {
-        const toTop = document.querySelector('.to-top');
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             toTop.classList.remove('hidden');
         } else {
@@ -17,43 +28,51 @@ app.navButtonListener = () => {
     });
 };
 
-app.projectModal = () => {
-    const projectButton = document.querySelector('.project-button');
-    const modal = document.querySelector('.modal');
-    const modalClose = document.querySelector('.close-modal');
+app.skillContainerListener = () =>{
+    const skills = document.querySelectorAll('.skill-container');
 
-    projectButton.addEventListener('click', () => {
-        console.log('open');
-        // modal.classList.remove('hidden');
-    });
-
-    modalClose.addEventListener('click', () => {
-        console.log('close');
-        // modal.classList.add('hidden');
+    skills.forEach((skill) => {
+        skill.addEventListener('mouseenter', function () {
+            this.querySelector('i').classList.add('colored');
+        });
+        skill.addEventListener('mouseleave', function () {
+            this.querySelector('i').classList.remove('colored');
+        });
     });
 };
 
 
+// app.projectModal = () => {
+//     const projectButton = document.querySelector('.project-button');
+//     const modal = document.querySelector('.modal');
+//     const modalClose = document.querySelector('.close-modal');
+//     const body = document.querySelector('body');
 
-app.typewriter = (toType) => {
-    const stringArray = [...toType];
+//     projectButton.addEventListener('click', () => {
+//         // body.classList.add('modal-open');
+//         modal.classList.remove('hidden');
+//     });
 
-    console.log('test');
-    // stringArray.forEach((char)=>{
-    //     setTimeout(()=>{
-    //         typewriterSpan.innerText = (typewriterSpan.innerText !== null ? typewriterSpan.innerText : '') + char;
-    //     }, 500);
-    // })
-    // console.log(wordArray);
-};
+//     modalClose.addEventListener('click', () => {
+//         // body.classList.remove('modal-open');
+//         modal.classList.add('hidden');
+//     });
+// };
 
-app.init = () => {
-    // do some shit
-    // app.stringsToType.forEach((stringToType) => {
-    //     app.typewriter(stringToType);
-    // });
-    app.navButtonListener();
-    app.projectModal();
-};
+
+
+// app.typewriter = (toType) => {
+//     const stringArray = [...toType];
+
+//     console.log('test');
+//     // stringArray.forEach((char)=>{
+//     //     setTimeout(()=>{
+//     //         typewriterSpan.innerText = (typewriterSpan.innerText !== null ? typewriterSpan.innerText : '') + char;
+//     //     }, 500);
+//     // })
+//     // console.log(wordArray);
+// };
+
+
 
 app.init();

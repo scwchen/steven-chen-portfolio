@@ -11,9 +11,8 @@ html {
 }
 
 body {
-    // background-color: $background-color-main;
-    // color: $font-color-main;
     position: relative;
+    color: $background-color-main;
 }
 
 h1,
@@ -63,10 +62,11 @@ section {
 
 .section-heading {
     position: absolute;
+    width: 90%;
     text-transform: uppercase;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(211, 211, 211, 0.3);
+    color: $heading-color-light;
     font-size: 5rem;
     letter-spacing: 3px;
 }
@@ -122,8 +122,6 @@ section {
     text-align: center;
 }
 
-
-
 // Firefox
 * {
     scrollbar-color: $accent-color $background-color-main;
@@ -141,9 +139,8 @@ section {
 *::-webkit-scrollbar-thumb {
     background-color: $accent-color;
     border-radius: 100vw;
-    border: 3px solid $background-color-main
+    border: 3px solid $background-color-main;
 }
-
 
 .hollow-button {
     color: $accent-color;
@@ -158,7 +155,46 @@ section {
     }
 }
 
+.solid-button {
+    color: white;
+    padding: 0.7rem 1rem;
+    background-color: $accent-color;
+    border-radius: 50px;
+    border: 2px solid $accent-color;
+}
+
 button {
     background: none;
     cursor: pointer;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 0 5%;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+    transition: all 0.5s;
+    border: 2px solid #000;
+    border-radius: 10px;
+    &:hover {
+        transform: scale(1.1);
+        border-color: $accent-color;
+        color: $accent-color;
+    }
+    i {
+        position: relative;
+        font-size: 5rem;
+        padding: 0.7rem;
+    }
+    p {
+        margin: 10% 0;
+    }
 }
