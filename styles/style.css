@@ -818,7 +818,7 @@ CONTACT
 .contact-me .book-appt a {
   padding-right: 0.5rem;
 }
-.contact-me .book-appt a:hover, .contact-me .book-appt a:hover i {
+.contact-me a:hover, .contact-me a:hover i {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #0dcaf0;
