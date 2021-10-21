@@ -13,16 +13,26 @@ header {
 }
 
 .header-nav-container {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 1rem;
+    position: relative;
+    padding: 1.5rem;
+    justify-content: space-between;
+    height: 100vh;
     .header-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100vh;
-        padding: 2rem 0;
+        transition: max-height 0.3s ease-out;
     }
+}
+
+.hamburger-menu {
+    display: none;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .header-nav-hero {
@@ -43,8 +53,12 @@ header {
     flex-direction: column;
     align-items: center;
     li {
+        text-align: center;
+    }
+    a {
+        display: block;
         padding: 1rem;
-        a:hover {
+        &:hover {
             transition: color 0.5s;
             color: $accent-color;
         }

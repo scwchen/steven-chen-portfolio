@@ -8,6 +8,7 @@ html {
     font-size: 125%;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -69,6 +70,7 @@ section {
 .section-heading {
     position: absolute;
     width: 90%;
+    text-align: center;
     text-transform: uppercase;
     left: 50%;
     transform: translateX(-50%);
@@ -204,7 +206,7 @@ button {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
-    gap: 0 5%;
+    gap: 0 3%;
 }
 
 .skill-container {
@@ -213,6 +215,7 @@ button {
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
+    max-width: 250px;
     transition: all 0.5s;
     border: 2px solid #000;
     border-radius: 10px;

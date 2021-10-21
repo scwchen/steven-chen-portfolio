@@ -8,6 +8,7 @@
     <title>Steven Chen - Work in Progress</title>
     <script src="https://kit.fontawesome.com/69d6599dec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+    <link rel="stylesheet" href="./styles/aos.css">
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
@@ -15,36 +16,39 @@
 <body>
     <div class="wrapper-main-content">
         <header>
-            <div class="wrapper">
-                <div class="header-nav-container">
-                    <nav class="header-nav">
-                        <div class="header-nav-hero">
-                            <img src="./assets/hero-test.jpg" alt="Steven Chen, front end web developer.">
-                            <h1>Steven Chen</h1>
-                        </div>
-                        <ul class="header-nav-list">
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
 
-                        <div class="header-nav-favicon">
-                            <ul class="header-nav-favicon-list">
-                                <li><a href="https://www.linkedin.com/in/scwchen/" target="_blank"
-                                        rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="https://github.com/scwchen" target="_blank" rel="noopener noreferrer"><i
-                                            class="fab fa-github"></i></a></li>
-                                <li><a href="https://twitter.com/schen05" target="_blank" rel="noopener noreferrer"><i
-                                            class="fab fa-twitter"></i></a></li>
-                                <li><a href="https://medium.com/@scwchen" target="_blank" rel="noopener noreferrer"><i
-                                            class="fab fa-medium-m"></i></a></li>
-                            </ul>
-                        </div>
-                    </nav>
+            <div class="header-nav-container">
+
+                <div class="header-nav-hero">
+                    <img src="./assets/hero-test.jpg" alt="Steven Chen, front end web developer.">
+                    <h1 class="logo">Steven Chen</h1>
                 </div>
+                <nav class="header-nav">
+                    <ul class="header-nav-list">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-nav-favicon">
+                    <ul class="header-nav-favicon-list">
+                        <li><a href="https://www.linkedin.com/in/scwchen/" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://github.com/scwchen" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/schen05" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://medium.com/@scwchen" target="_blank" rel="noopener noreferrer"><i
+                                    class="fab fa-medium-m"></i></a></li>
+                    </ul>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
+
         </header> <!-- end of header -->
 
         <main>
@@ -65,7 +69,7 @@
                         <h2 class="section-heading">About Me</h2>
                         <p class="section-sub-heading">Get to Know Me</p>
                     </div>
-                    <div class="about-text">
+                    <div class="about-text" data-aos="fade-right">
                         <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
                         <p class="text-content">I am a Front-End Web Developer based in Toronto, ON.
 
@@ -85,7 +89,7 @@
                         <h2 class="section-heading">Skills</h2>
                         <p class="section-sub-heading">My Toolkit</p>
                     </div>
-                    <div class="skills-content">
+                    <div class="skills-content" data-aos="fade-up-left">
                         <div class="skill-container">
                             <i class="devicon-html5-plain"></i>
                             <p>HTML</p>
@@ -144,7 +148,7 @@
                         <h2 class="section-heading">Projects</h2>
                         <p class="section-sub-heading">My Work</p>
                     </div>
-                    <div class="project-content">
+                    <div class="project-content" data-aos="fade-up">
 
                         <div class="project-container">
                             <div class="project-heading">
@@ -185,7 +189,7 @@
                         <h2 class="section-heading">Contact</h2>
                         <p class="section-sub-heading">Get In Touch</p>
                     </div>
-                    <div class="contact-content">
+                    <div class="contact-content" data-aos="zoom-out-down">
                         <aside class="contact-info">
                             <div class="contact-me">
                                 <div class="follow-me">
@@ -206,8 +210,8 @@
                                 </div>
                                 <div class="book-appt">
                                     <h4>Book with Me</h4>
-                                    <a href="https://www.linkedin.com/in/scwchen/" target="_blank"
-                                        rel="noopener noreferrer"><i class="fas fa-calendar"></i></a>
+                                    <a href="https://calendly.com/scwchen" target="_blank" rel="noopener noreferrer"><i
+                                            class="fas fa-calendar"></i>Calendly</a>
                                 </div>
                             </div>
 
@@ -223,7 +227,7 @@
                                     <p>Message Me</p>
                                     <div class="name-container">
                                         <label class="sr-only" for="full-name">Name</label>
-                                        <input type="text" name="name" id="full-name" placeholder="First and Last"
+                                        <input type="text" name="name" id="full-name" placeholder="First and Last Name"
                                             required>
                                     </div>
                                     <div class="email-container">
@@ -259,12 +263,12 @@
         </footer> <!-- end of footer -->
 
         <!-- Toggle button -->
-        <div class="toggle-container">
+        <!-- <div class="toggle-container">
             <button class="toggle-dark">
                 <i class="fas fa-moon chosen"></i>
                 <i class="fas fa-sun"></i>
             </button>
-        </div>
+        </div> -->
 
         <!-- Navigation button -->
         <div class="nav-button">
@@ -278,7 +282,8 @@
 
 
 
-    <!-- JS script -->
+    <!-- JS scripts -->
+    <script src="./aos.js"></script>
     <script src="./script.js"></script>
 </body>
 

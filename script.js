@@ -5,25 +5,39 @@
 const app = {};
 
 // Typewriter variables
-app.strings = ["I am a learner", "I am a movie nerd", "I am Dark Mode", "I am a Web Developer", "I'm Steven Chen"];
+app.strings = ["I am a lifelong learner", "I am a movie nerd", "I am Dark Mode", "I am a Web Developer", "I'm Steven Chen"];
 app.sIndex = 0;
 app.textPosition = 0;
 app.speed = 75;
-app.h1 = document.querySelector('.typewriter');
+app.typedHeading = document.querySelector('.typewriter');
 
 app.init = () => {
 
     app.addWindowEventListeners();
     app.skillContainerListener();
-    app.toggleEventListener();
+    // app.toggleEventListener();
+    app.mediaW480();
+    app.menuEventListener();
+    app.menuItemEventListener();
 };
 
 // ===========================================
 // TYPEWRITER functions
 // ===========================================
 
+app.mediaW480 = () => {
+    const logo = document.querySelector('.logo');
+    window.addEventListener('resize', () => {
+        if (window.innerWidth < 500) {
+            logo.innerText = "SC";
+        } else {
+            logo.innerText = "Steven Chen";
+        }
+    });
+};
+
 app.typewriter = () => {
-    app.h1.innerHTML = app.strings[app.sIndex].substring(0, app.textPosition) + '<span class="blinker">&#124</span>';
+    app.typedHeading.innerHTML = app.strings[app.sIndex].substring(0, app.textPosition) + '<span class="blinker">&#124</span>';
     if (app.textPosition++ != app.strings[app.sIndex].length) {
         setTimeout(app.typewriter, app.speed);
     }
@@ -100,10 +114,48 @@ app.toggleDarkMode = () => {
 
 };
 
-app.toggleEventListener = () => {
-    const darkToggle = document.querySelector('.toggle-dark');
-    darkToggle.addEventListener('click', app.toggleDarkMode);
+// app.toggleEventListener = () => {
+//     const darkToggle = document.querySelector('.toggle-dark');
+//     darkToggle.addEventListener('click', app.toggleDarkMode);
+// }
+
+
+app.menuShow = () => {
+    const headerNav = document.querySelector('.header-nav')
+    
+    if (headerNav.style.maxHeight) {
+        headerNav.style.maxHeight = null;
+    } else {
+        headerNav.style.maxHeight = `${headerNav.scrollHeight}px`;
+    }
+}
+
+// Adding event listen to hide the menu when any of the nav list items are selected
+app.menuItemEventListener = () => {
+    const navList = document.querySelectorAll('.header-nav-list a');
+    
+    navList.forEach((navItem)=>{
+        navItem.addEventListener('click', app.menuShow);
+    });
+}
+// Adding event listener to the show menu on mobile
+app.menuEventListener = () => {
+    const menuButton = document.querySelector('.hamburger-menu');
+    const menuIcon = document.querySelector('.hamburger-menu i')
+
+
+    menuButton.addEventListener('click', () => {
+        if (menuIcon.classList.contains('fa-bars')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+        } else {
+            menuIcon.classList.add('fa-bars');
+            menuIcon.classList.remove('fa-times');
+        }
+        app.menuShow();
+    });
 }
 
 
+AOS.init();
 app.init();

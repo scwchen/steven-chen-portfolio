@@ -5,7 +5,9 @@ CONTACT
 .contact {
     display: flex;
     h4 {
+        
         text-transform: uppercase;
+        font-size: 1.2rem;
     }
 }
 
@@ -18,6 +20,7 @@ CONTACT
         height: 3rem;
         width: 100%;
         padding: 0.5rem;
+        color: white;
     }
     textarea {
         height: 10rem;
@@ -25,10 +28,11 @@ CONTACT
     }
     fieldset {
         border-radius: 5px;
-        padding: 1.5rem;
+        padding: 3%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem 2rem;
+        margin: 0;
     }
     .message-container,
     .submit-container,
@@ -40,21 +44,33 @@ CONTACT
     }
     p {
         text-align: center;
+        text-transform: uppercase;
         margin: 0.5rem 0;
     }
 }
 
 .contact-me {
     display: grid;
-
-}
-.follow-me ul {
-    display: flex;
-    li {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+    padding: 3%;
+    .follow-me,
+    .book-appt {
         padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .follow-me ul {
+        display: flex;
+    }
+    .book-appt a {
+        padding-right: 0.5rem;
     }
     i {
         color: white;
+        padding: 0.5rem;
         &:hover {
             transition: all 0.5s;
             color: $accent-color;
