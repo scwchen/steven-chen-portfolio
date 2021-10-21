@@ -5,7 +5,7 @@
 const app = {};
 
 // Typewriter variables
-app.strings = ["I am a lifelong learner", "I am a movie nerd", "I am Dark Mode", "I am a Web Developer", "I'm Steven Chen"];
+app.strings = ["I am a lifelong learner", "I am a movie nerd", "I am Dark Mode", "I am a Web Developer", "I am Steven Chen"];
 app.sIndex = 0;
 app.textPosition = 0;
 app.speed = 75;
@@ -97,22 +97,21 @@ app.addWindowEventListeners = () => {
     window.addEventListener("load", app.introText);
 };
 
-app.toggleDarkMode = () => {
-    const dark = document.querySelector('.fa-moon');
-    const light = document.querySelector('.fa-sun');
+// app.toggleDarkMode = () => {
+//     const dark = document.querySelector('.fa-moon');
+//     const light = document.querySelector('.fa-sun');
 
-    if (dark.classList.contains('chosen')) {
-        // dark.classList.remove('chosen');
-        // do some light mode shit
-    } else {
-        // toggle.classList.add('chosen');
-        // do some dark mode shit
-    }
+//     if (dark.classList.contains('chosen')) {
+//         // dark.classList.remove('chosen');
+//         // do some light mode stuff
+//     } else {
+//         // toggle.classList.add('chosen');
+//         // do some dark mode stuff
 
-    dark.classList.toggle('chosen');
-    light.classList.toggle('chosen');
+//     dark.classList.toggle('chosen');
+//     light.classList.toggle('chosen');
 
-};
+// };
 
 // app.toggleEventListener = () => {
 //     const darkToggle = document.querySelector('.toggle-dark');
