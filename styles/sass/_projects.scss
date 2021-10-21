@@ -2,19 +2,42 @@
 PROJECTS
 =========================================== */
 .project-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 5%;
 }
 
 .project-container {
     position: relative;
-    width: 30%;
+    margin: 5% 0;
+    .project-info {
+        padding: 5%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        background-color: rgba($background-color-main, 0.8);
+        z-index: 50;
+        .project-heading {
+            text-align: center;
+        }
+        a {
+            text-transform: uppercase;
+        }
+    }
     .project-image {
-        opacity: 0.7;
         box-shadow: 0px 0px 2px 2px #000;
         border-radius: 10px;
         overflow: hidden;
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
     }
 }
-

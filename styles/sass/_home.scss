@@ -5,7 +5,6 @@ HOME
 .home {
     position: relative;
     height: 100vh;
-    // background-image: url("../assets/hero-background-test.jpg");
     background-image: url("../../assets/hero-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -18,7 +17,7 @@ HOME
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(#000, 0.7);
 }
 
 .home-heading-container {
