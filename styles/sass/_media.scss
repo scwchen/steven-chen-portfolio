@@ -1,3 +1,10 @@
+/* Coming down from full screen or wider */
+@media (max-width: 1280px) {
+    .project-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Portrait tablet and small desktops */
 @media (max-width: 980px) {
     header {
@@ -79,5 +86,14 @@
     }
     .section-heading {
         display: none;
+    }
+    .project-text {
+        .project-summary p {
+            font-size: 0.8rem;
+        }
+    }
+    .contact-form fieldset,
+    .contact-me {
+        grid-template-columns: 1fr;
     }
 }

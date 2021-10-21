@@ -5,7 +5,6 @@ CONTACT
 .contact {
     display: flex;
     h4 {
-        
         text-transform: uppercase;
         font-size: 1.2rem;
     }
@@ -67,14 +66,15 @@ CONTACT
     }
     .book-appt a {
         padding-right: 0.5rem;
+        &:hover,
+        &:hover i {
+            transition: all 0.5s;
+            color: $accent-color;
+        }
     }
     i {
         color: white;
         padding: 0.5rem;
-        &:hover {
-            transition: all 0.5s;
-            color: $accent-color;
-        }
     }
 }
 

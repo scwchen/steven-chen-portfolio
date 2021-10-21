@@ -4,40 +4,86 @@ PROJECTS
 .project-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 0 5%;
+    grid-gap: 0 3%;
+    text-align: center;
+    .project-container {
+        position: relative;
+        margin: 5% 0;
+    }
 }
 
-.project-container {
-    position: relative;
-    margin: 5% 0;
-    .project-info {
-        padding: 5%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 10px;
-        background-color: rgba($background-color-main, 0.8);
-        z-index: 50;
-        .project-heading {
-            text-align: center;
-        }
-        a {
-            text-transform: uppercase;
+.project-info {
+    visibility: hidden;
+    opacity: 0;
+    padding: 5%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: rgba($background-color-main, 0.8);
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .project-heading {
+        text-transform: uppercase;
+        margin: 3% 0;
+    }
+
+    .tool-list {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.project-container:hover .project-info {
+    visibility: visible;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
+
+.project-text {
+    .project-links {
+        text-transform: uppercase;
+        margin: 3% 0;
+    }
+    .tool-list {
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px $accent-color;
+    }
+    .project-link {
+        padding: 2% 5%;
+        border: 2px solid #fff;
+        border-radius: 5px;
+    }
+    .project-link:hover {
+        transition: color 0.3s, border-color 0.3s;
+        color: $accent-color;
+        border-color: $accent-color;
+    }
+    .project-summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p {
+            padding: 3% 0;
         }
     }
-    .project-image {
-        box-shadow: 0px 0px 2px 2px #000;
-        border-radius: 10px;
-        overflow: hidden;
+}
+
+.project-image {
+    box-shadow: 0px 0px 2px 2px #000;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    min-height: 400px;
+    img {
         height: 100%;
         width: 100%;
-        img {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
+        object-fit: cover;
+        object-position: center;
     }
 }

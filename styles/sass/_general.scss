@@ -17,6 +17,11 @@ body {
     background-color: $background-color-secondary;
 }
 
+.header,
+.home {
+    color: $font-color-main;
+}
+
 h1,
 h2,
 h3 {
@@ -50,9 +55,6 @@ img {
     display: block;
 }
 
-.accent-color {
-    color: $accent-color;
-}
 
 section {
     position: relative;
@@ -62,6 +64,9 @@ section {
     padding: 3rem 0;
 }
 
+.accent-color {
+    color: $accent-color;
+}
 
 .heading-container {
     margin-bottom: 2rem;
@@ -97,11 +102,6 @@ section {
     }
 }
 
-
-
-.text-content {
-    text-align: center;
-}
 
 // Firefox
 * {
@@ -142,6 +142,10 @@ section {
     background-color: $accent-color;
     border-radius: 50px;
     border: 2px solid $accent-color;
+    &:hover {
+        transition: background-color 0.5s;
+        background-color: rgba($accent-color, 0.7);
+    }
 }
 
 button {

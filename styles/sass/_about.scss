@@ -3,9 +3,19 @@ ABOUT
 =========================================== */
 
 .about-text {
-    text-align: center;
+    padding: 2%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     & > * {
         margin: 2% 0;
     }
-    
+    .resume-container {
+        text-align: center;
+        .resume-button {
+            display: inline-block;
+        }
+    }
 }
