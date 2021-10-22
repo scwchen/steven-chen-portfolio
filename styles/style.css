@@ -272,6 +272,7 @@ h3 {
 
 .wrapper-main-content {
   position: relative;
+  overflow-x: hidden;
   margin-left: 250px;
   width: calc(100% - 250px);
 }
@@ -566,7 +567,6 @@ HOME
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
 }
 
 .overlay {
