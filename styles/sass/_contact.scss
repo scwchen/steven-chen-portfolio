@@ -4,6 +4,7 @@ CONTACT
 
 .contact {
     display: flex;
+    overflow-x: hidden;
     h4 {
         text-transform: uppercase;
         font-size: 1.2rem;

@@ -40,6 +40,9 @@ header {
         color: $font-color-main;
         text-align: center;
         font-size: 1.3rem;
+        .mobile-logo {
+            display: none;
+        }
     }
     img {
         margin: 1rem 0;

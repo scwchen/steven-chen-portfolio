@@ -8,11 +8,10 @@ html {
     font-size: 125%;
     font-family: "Poppins", sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    
 }
 
 body {
-    position: relative;
     color: white;
     background-color: $background-color-secondary;
 }
@@ -29,6 +28,7 @@ h3 {
 }
 
 .wrapper-main-content {
+    position: relative;
     margin-left: 250px;
     width: calc(100% - 250px);
 }
@@ -54,7 +54,6 @@ img {
     max-width: 100%;
     display: block;
 }
-
 
 section {
     position: relative;
@@ -101,7 +100,6 @@ section {
         background-color: $accent-color;
     }
 }
-
 
 // Firefox
 * {
@@ -153,7 +151,6 @@ button {
     cursor: pointer;
 }
 
-
 .skills-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -196,4 +193,3 @@ button {
         opacity: 0;
     }
 }
-

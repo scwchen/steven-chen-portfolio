@@ -9,11 +9,11 @@ ABOUT
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
     & > * {
         margin: 2% 0;
     }
     .resume-container {
-        text-align: center;
         .resume-button {
             display: inline-block;
         }

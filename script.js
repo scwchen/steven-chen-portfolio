@@ -5,7 +5,7 @@
 const app = {};
 
 // Typewriter variables
-app.strings = ["I am a lifelong learner", "I am a movie nerd", "I am Dark Mode", "I am a Web Developer", "I am Steven Chen"];
+app.strings = ["I am a Web Developer", "I am a Lifelong Learner", "I am a Movie Nerd", "I am Dark Mode", "I am a Web Developer", "I am Steven Chen"];
 app.sIndex = 0;
 app.textPosition = 0;
 app.speed = 75;
@@ -16,7 +16,6 @@ app.init = () => {
     app.addWindowEventListeners();
     app.skillContainerListener();
     // app.toggleEventListener();
-    app.mediaW480();
     app.menuEventListener();
     app.menuItemEventListener();
 };
@@ -25,19 +24,10 @@ app.init = () => {
 // TYPEWRITER functions
 // ===========================================
 
-app.mediaW480 = () => {
-    const logo = document.querySelector('.logo');
-    window.addEventListener('resize', () => {
-        if (window.innerWidth < 500) {
-            logo.innerText = "SC";
-        } else {
-            logo.innerText = "Steven Chen";
-        }
-    });
-};
-
 app.typewriter = () => {
+
     app.typedHeading.innerHTML = app.strings[app.sIndex].substring(0, app.textPosition) + '<span class="blinker">&#124</span>';
+
     if (app.textPosition++ != app.strings[app.sIndex].length) {
         setTimeout(app.typewriter, app.speed);
     }
@@ -95,6 +85,7 @@ app.addWindowEventListeners = () => {
     });
 
     window.addEventListener("load", app.introText);
+
 };
 
 // app.toggleDarkMode = () => {
@@ -118,10 +109,9 @@ app.addWindowEventListeners = () => {
 //     darkToggle.addEventListener('click', app.toggleDarkMode);
 // }
 
-
 app.menuShow = () => {
     const headerNav = document.querySelector('.header-nav')
-    
+
     if (headerNav.style.maxHeight) {
         headerNav.style.maxHeight = null;
     } else {
@@ -132,8 +122,8 @@ app.menuShow = () => {
 // Adding event listen to hide the menu when any of the nav list items are selected
 app.menuItemEventListener = () => {
     const navList = document.querySelectorAll('.header-nav-list a');
-    
-    navList.forEach((navItem)=>{
+
+    navList.forEach((navItem) => {
         navItem.addEventListener('click', app.menuShow);
     });
 }
@@ -154,9 +144,6 @@ app.menuEventListener = () => {
         app.menuShow();
     });
 }
-
-
-
 
 AOS.init();
 app.init();

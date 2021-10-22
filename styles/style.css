@@ -251,11 +251,9 @@ html {
   font-size: 125%;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
-  position: relative;
   color: white;
   background-color: #212529;
 }
@@ -272,6 +270,7 @@ h3 {
 }
 
 .wrapper-main-content {
+  position: relative;
   margin-left: 250px;
   width: calc(100% - 250px);
 }
@@ -507,6 +506,9 @@ header {
   text-align: center;
   font-size: 1.3rem;
 }
+.header-nav-hero h1 .mobile-logo {
+  display: none;
+}
 .header-nav-hero img {
   margin: 1rem 0;
   border-radius: 100%;
@@ -563,6 +565,7 @@ HOME
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -589,7 +592,11 @@ HOME
       -ms-flex-pack: center;
           justify-content: center;
 }
+.home-heading-container .mobile-type {
+  display: none;
+}
 .home-heading-container h2 {
+  width: 100%;
   font-size: 3rem;
 }
 .home-heading-container p {
@@ -617,12 +624,10 @@ ABOUT
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: center;
 }
 .about-text > * {
   margin: 2% 0;
-}
-.about-text .resume-container {
-  text-align: center;
 }
 .about-text .resume-container .resume-button {
   display: inline-block;
@@ -745,6 +750,7 @@ CONTACT
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
 }
 .contact h4 {
   text-transform: uppercase;
@@ -888,30 +894,6 @@ footer p {
   right: 4rem;
 }
 
-.toggle-dark {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: fixed;
-  right: 0;
-  top: 10%;
-  padding: 0.2rem 0.3rem;
-  border-radius: 50px;
-  border: 2px solid rgba(13, 202, 240, 0.2);
-  color: #0dcaf0;
-}
-.toggle-dark i {
-  opacity: 0.2;
-  margin: 0.3rem 0;
-}
-.toggle-dark i.chosen {
-  opacity: 1;
-}
-
 /* Coming down from full screen or wider */
 @media (max-width: 1280px) {
   .project-content {
@@ -968,6 +950,13 @@ footer p {
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  .home-heading-container h2 {
+    font-size: 2.2rem;
+  }
+  .home-heading-container p {
+    font-size: 1.2rem;
+  }
+
   .skills-content {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -986,6 +975,13 @@ footer p {
   }
 }
 @media (max-width: 560px) {
+  .header-nav-hero h1 .mobile-logo {
+    display: block;
+  }
+  .header-nav-hero h1 .desktop-logo {
+    display: none;
+  }
+
   .skills-content {
     grid-template-columns: repeat(2, 1fr);
   }

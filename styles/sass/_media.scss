@@ -53,6 +53,14 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+    .home-heading-container {
+        h2 {
+            font-size: 2.2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+    }
     .skills-content {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -71,6 +79,15 @@
 }
 
 @media (max-width: 560px) {
+    .header-nav-hero h1 {
+        .mobile-logo {
+            display: block;
+        }
+        .desktop-logo {
+            display: none;
+        }
+    }
+
     .skills-content {
         grid-template-columns: repeat(2, 1fr);
     }

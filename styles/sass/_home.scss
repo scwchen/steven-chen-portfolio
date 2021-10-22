@@ -9,6 +9,7 @@ HOME
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .overlay {
@@ -25,7 +26,11 @@ HOME
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    .mobile-type {
+        display: none;
+    }
     h2 {
+        width: 100%;
         font-size: 3rem;
     }
     p {
