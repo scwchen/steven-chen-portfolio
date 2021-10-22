@@ -61,6 +61,11 @@ section {
     &.tertiary {
         background-color: $background-color-tertiary;
     }
+    &.tertiary.light-mode,
+    &.light-mode {
+        color: $background-color-main;
+        background-color: white;
+    }
     padding: 3rem 0;
 }
 
@@ -169,6 +174,9 @@ button {
     transition: all 0.5s;
     border: 2px solid #fff;
     border-radius: 10px;
+    &.light-mode {
+        border-color: $background-color-main;
+    }
     &:hover {
         transform: scale(1.1);
         border-color: $accent-color;

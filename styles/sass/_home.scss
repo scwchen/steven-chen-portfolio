@@ -9,6 +9,9 @@ HOME
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    &.light-mode {
+        color: white;
+    }
 }
 
 .overlay {

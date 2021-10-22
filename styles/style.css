@@ -306,6 +306,10 @@ section {
 section.tertiary {
   background-color: #343A40;
 }
+section.tertiary.light-mode, section.light-mode {
+  color: #111418;
+  background-color: white;
+}
 
 .accent-color {
   color: #0dcaf0;
@@ -424,6 +428,9 @@ button {
   transition: all 0.5s;
   border: 2px solid #fff;
   border-radius: 10px;
+}
+.skill-container.light-mode {
+  border-color: #111418;
 }
 .skill-container:hover {
   -webkit-transform: scale(1.1);
@@ -568,6 +575,9 @@ HOME
   background-repeat: no-repeat;
   background-size: cover;
 }
+.home.light-mode {
+  color: white;
+}
 
 .overlay {
   position: absolute;
@@ -683,6 +693,9 @@ PROJECTS
       -ms-flex-pack: center;
           justify-content: center;
 }
+.project-info.light-mode h3, .project-info.light-mode .project-summary {
+  color: white;
+}
 
 .project-container:hover .project-info {
   visibility: visible;
@@ -768,6 +781,11 @@ CONTACT
   padding: 0.5rem;
   color: white;
 }
+.contact-form input.light-mode,
+.contact-form textarea.light-mode {
+  color: #111418;
+  background-color: white;
+}
 .contact-form textarea {
   height: 10rem;
   resize: none;
@@ -834,6 +852,9 @@ CONTACT
   color: white;
   padding: 0.5rem;
 }
+.contact-me i.light-mode {
+  color: #111418;
+}
 
 .submit-button {
   width: 40%;
@@ -893,6 +914,30 @@ footer p {
   position: fixed;
   bottom: 0.9rem;
   right: 4rem;
+}
+
+.toggle-dark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 10%;
+  padding: 0.2rem 0.3rem;
+  border-radius: 50px;
+  border: 2px solid gray;
+  color: gray;
+}
+.toggle-dark i {
+  opacity: 0.2;
+  margin: 0.3rem 0;
+}
+.toggle-dark i.chosen {
+  opacity: 1;
 }
 
 /* Coming down from full screen or wider */

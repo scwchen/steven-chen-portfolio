@@ -21,6 +21,10 @@ CONTACT
         width: 100%;
         padding: 0.5rem;
         color: white;
+        &.light-mode {
+            color: $background-color-main;
+            background-color: white;
+        }
     }
     textarea {
         height: 10rem;
@@ -61,6 +65,10 @@ CONTACT
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: white;
+        &.light-mode {
+            color: $background-color-main;
+        }
     }
     .follow-me ul {
         display: flex;
@@ -78,6 +86,9 @@ CONTACT
     i {
         color: white;
         padding: 0.5rem;
+        // &.light-mode {
+        //     color: $background-color-main;
+        // }
     }
 }
 

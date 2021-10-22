@@ -33,22 +33,22 @@
     right: 4rem;
 }
 
-// .toggle-dark {
-//     display: flex;
-//     flex-direction: column;
-//     position: fixed;
-//     right: 0;
-//     top: 10%;
-//     i {
-//         opacity: 0.2;
-//         margin: 0.3rem 0;
-//     }
-//     padding: 0.2rem 0.3rem;
-//     border-radius: 50px;
-//     border: 2px solid rgba($accent-color, $alpha: 0.2);
-//     color: $accent-color;
-//     i.chosen {
-//         opacity: 1;
-//     }
-// }
+.toggle-dark {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 10%;
+    i {
+        opacity: 0.2;
+        margin: 0.3rem 0;
+        &.chosen {
+            opacity: 1;
+        }
+    }
+    padding: 0.2rem 0.3rem;
+    border-radius: 50px;
+    border: 2px solid rgba(128, 128, 128, 1);
+    color: rgba(128, 128, 128, 1);
+}
 

@@ -15,7 +15,7 @@ app.init = () => {
 
     app.addWindowEventListeners();
     app.skillContainerListener();
-    // app.toggleEventListener();
+    app.toggleEventListener();
     app.menuEventListener();
     app.menuItemEventListener();
 };
@@ -88,26 +88,37 @@ app.addWindowEventListeners = () => {
 
 };
 
-// app.toggleDarkMode = () => {
-//     const dark = document.querySelector('.fa-moon');
-//     const light = document.querySelector('.fa-sun');
+app.toggleDarkMode = () => {
+    const dark = document.querySelector('.fa-moon');
+    const light = document.querySelector('.fa-sun');
 
-//     if (dark.classList.contains('chosen')) {
-//         // dark.classList.remove('chosen');
-//         // do some light mode stuff
-//     } else {
-//         // toggle.classList.add('chosen');
-//         // do some dark mode stuff
+    // This is a real brute force way of doing things. I just wanted to see if it would work. 
+    // I think I will have to use rooted css variables rather than sass ones for the dark mode toggle.
+    const sections = document.querySelectorAll('section');
+    const projects = document.querySelectorAll('.project-info');
+    const inputs = document.querySelectorAll('.contact-form input');
+    const skills = document.querySelectorAll('.skill-container');
+    const home = document.querySelector('.home');
+    const textarea = document.querySelector('.contact-form textarea');
+    const contactMe = document.querySelectorAll('.contact-me i');
+    const calendly = document.querySelector('.contact-me .book-appt');
 
-//     dark.classList.toggle('chosen');
-//     light.classList.toggle('chosen');
 
-// };
+    const elementsToToggle = [...sections, ...projects, ...inputs, ...skills, ...contactMe, calendly, home, textarea];
 
-// app.toggleEventListener = () => {
-//     const darkToggle = document.querySelector('.toggle-dark');
-//     darkToggle.addEventListener('click', app.toggleDarkMode);
-// }
+    elementsToToggle.forEach((element) => {
+        element.classList.toggle('light-mode');
+    })
+
+    dark.classList.toggle('chosen');
+    light.classList.toggle('chosen');
+
+};
+
+app.toggleEventListener = () => {
+    const darkToggle = document.querySelector('.toggle-dark');
+    darkToggle.addEventListener('click', app.toggleDarkMode);
+};
 
 app.menuShow = () => {
     const headerNav = document.querySelector('.header-nav')

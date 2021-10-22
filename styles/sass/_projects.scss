@@ -36,6 +36,10 @@ PROJECTS
         display: flex;
         justify-content: center;
     }
+    &.light-mode h3,
+    &.light-mode .project-summary{
+        color: white;
+    }
 }
 
 .project-container:hover .project-info {
