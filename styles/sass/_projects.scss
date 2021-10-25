@@ -38,12 +38,6 @@ PROJECTS
     }
 }
 
-.project-container:hover .project-info {
-    visibility: visible;
-    transition: opacity 0.3s;
-    opacity: 1;
-}
-
 .project-text {
     .project-links {
         text-transform: uppercase;
@@ -58,11 +52,7 @@ PROJECTS
         border: 2px solid #fff;
         border-radius: 5px;
     }
-    .project-link:hover {
-        transition: color 0.3s, border-color 0.3s;
-        color: $accent-color;
-        border-color: $accent-color;
-    }
+
     .project-summary {
         display: flex;
         flex-direction: column;

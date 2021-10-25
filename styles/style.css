@@ -402,6 +402,7 @@ button {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   gap: 0 3%;
+  margin: 0 auto;
 }
 
 .skill-container {
@@ -418,8 +419,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem 0;
-  max-width: 250px;
+  margin: 1rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: 2px solid #fff;
@@ -537,11 +537,6 @@ header {
   display: block;
   padding: 1rem;
 }
-.header-nav-list a:hover {
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
-  color: #0dcaf0;
-}
 
 .header-nav-favicon-list {
   display: -webkit-box;
@@ -550,11 +545,6 @@ header {
 }
 .header-nav-favicon-list li {
   margin: 0.5rem;
-}
-.header-nav-favicon-list li a:hover {
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
-  color: #0dcaf0;
 }
 
 /* ===========================================
@@ -570,6 +560,12 @@ HOME
 }
 
 .overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   top: 0;
   right: 0;
@@ -684,13 +680,6 @@ PROJECTS
           justify-content: center;
 }
 
-.project-container:hover .project-info {
-  visibility: visible;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-  opacity: 1;
-}
-
 .project-text .project-links {
   text-transform: uppercase;
   margin: 3% 0;
@@ -703,12 +692,6 @@ PROJECTS
   padding: 2% 5%;
   border: 2px solid #fff;
   border-radius: 5px;
-}
-.project-text .project-link:hover {
-  -webkit-transition: color 0.3s, border-color 0.3s;
-  transition: color 0.3s, border-color 0.3s;
-  color: #0dcaf0;
-  border-color: #0dcaf0;
 }
 .project-text .project-summary {
   display: -webkit-box;
@@ -825,11 +808,6 @@ CONTACT
 .contact-me .book-appt a {
   padding-right: 0.5rem;
 }
-.contact-me a:hover, .contact-me a:hover i {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  color: #0dcaf0;
-}
 .contact-me i {
   color: white;
   padding: 0.5rem;
@@ -865,14 +843,6 @@ footer p {
   padding: 1rem;
   border-radius: 100%;
   background-color: gray;
-}
-.to-top:hover {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  background-color: rgba(128, 128, 128, 0.5);
-}
-.to-top:hover + .nav-button-tooltip {
-  visibility: visible;
 }
 .to-top.hidden {
   display: none;
@@ -952,10 +922,10 @@ footer p {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .home-heading-container h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
   .home-heading-container p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .skills-content {
@@ -1007,5 +977,48 @@ footer p {
   .contact-form fieldset,
 .contact-me {
     grid-template-columns: 1fr;
+  }
+}
+@media (hover: hover) {
+  .header-nav-list a:hover {
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    color: #0dcaf0;
+  }
+
+  .header-nav-favicon-list li a:hover {
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    color: #0dcaf0;
+  }
+
+  .project-container:hover .project-info {
+    visibility: visible;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+    opacity: 1;
+  }
+
+  .project-text .project-link:hover {
+    -webkit-transition: color 0.3s, border-color 0.3s;
+    transition: color 0.3s, border-color 0.3s;
+    color: #0dcaf0;
+    border-color: #0dcaf0;
+  }
+
+  .contact-me a:hover,
+.contact-me a:hover i {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #0dcaf0;
+  }
+
+  .to-top:hover {
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-color: rgba(128, 128, 128, 0.5);
+  }
+  .to-top:hover + .nav-button-tooltip {
+    visibility: visible;
   }
 }

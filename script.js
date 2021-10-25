@@ -44,7 +44,7 @@ app.typeDelay = (ms) => {
 app.introText = async () => {
     for (let i = 0; i < app.strings.length; i++) {
         app.typewriter();
-        await app.typeDelay(app.strings[i].length * app.speed + 1500);
+        await app.typeDelay(app.strings[i].length * app.speed + 2000);
         app.textPosition = 0;
         ++app.sIndex;
     }
@@ -75,7 +75,7 @@ app.skillContainerListener = () => {
 
 app.addWindowEventListeners = () => {
     const toTop = document.querySelector('.to-top');
-
+    
     window.addEventListener('scroll', () => {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             toTop.classList.remove('hidden');

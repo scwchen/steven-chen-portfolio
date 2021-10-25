@@ -61,10 +61,6 @@ header {
     a {
         display: block;
         padding: 1rem;
-        &:hover {
-            transition: color 0.5s;
-            color: $accent-color;
-        }
     }
 }
 
@@ -72,9 +68,5 @@ header {
     display: flex;
     li {
         margin: 0.5rem;
-        a:hover {
-            transition: color 0.5s;
-            color: $accent-color;
-        }
     }
 }
