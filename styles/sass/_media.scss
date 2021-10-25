@@ -158,3 +158,22 @@
         }
     }
 }
+
+// For reduced motion. There is a better way of doing this but this works all the same.
+@media (prefers-reduced-motion: reduce) {
+    .home-heading-container {
+        .reduced-motion-home {
+            display: block;
+        }
+        .typewriter {
+            display: none;
+        }
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

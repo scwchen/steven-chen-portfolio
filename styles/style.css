@@ -597,6 +597,9 @@ HOME
   width: 100%;
   font-size: 3rem;
 }
+.home-heading-container .reduced-motion-home {
+  display: none;
+}
 .home-heading-container p {
   text-align: center;
   font-size: 1.4rem;
@@ -1025,5 +1028,23 @@ footer p {
   }
   .to-top:hover + .nav-button-tooltip {
     visibility: visible;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-heading-container .reduced-motion-home {
+    display: block;
+  }
+  .home-heading-container .typewriter {
+    display: none;
+  }
+
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
