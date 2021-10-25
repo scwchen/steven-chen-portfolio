@@ -255,6 +255,7 @@ html {
 }
 
 body {
+  font-size: 1rem;
   color: white;
   background-color: #212529;
 }
@@ -419,7 +420,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem;
+  margin: 3% 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   border: 2px solid #fff;
@@ -870,6 +871,10 @@ footer p {
   .project-content {
     grid-template-columns: 1fr;
   }
+
+  .skills-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 /* Portrait tablet and small desktops */
 @media (max-width: 980px) {
@@ -929,7 +934,7 @@ footer p {
   }
 
   .skills-content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skill-container i {
@@ -946,15 +951,15 @@ footer p {
   }
 }
 @media (max-width: 560px) {
+  body {
+    font-size: 0.9rem;
+  }
+
   .header-nav-hero h1 .mobile-logo {
     display: block;
   }
   .header-nav-hero h1 .desktop-logo {
     display: none;
-  }
-
-  .skills-content {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .skill-container i {

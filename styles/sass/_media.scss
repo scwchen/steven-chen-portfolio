@@ -3,6 +3,9 @@
     .project-content {
         grid-template-columns: 1fr;
     }
+    .skills-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Portrait tablet and small desktops */
@@ -62,7 +65,7 @@
         }
     }
     .skills-content {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .skill-container {
         i {
@@ -79,6 +82,9 @@
 }
 
 @media (max-width: 560px) {
+    body {
+        font-size: 0.9rem;
+    }
     .header-nav-hero h1 {
         .mobile-logo {
             display: block;
@@ -88,9 +94,6 @@
         }
     }
 
-    .skills-content {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .skill-container {
         i {
             font-size: 2rem;
