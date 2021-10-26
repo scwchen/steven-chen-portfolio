@@ -11,27 +11,31 @@ PROJECTS
         margin: 5% 0;
         &:hover .project-info {
             visibility: visible;
-            transition: opacity 0.3s;
             opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.3s, transform 0.3s;
         }
     }
 }
 
+
 .project-info {
-    visibility: hidden;
-    opacity: 0;
-    padding: 5%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 10px;
-    background-color: rgba($background-color-main, 0.8);
-    z-index: 50;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5%;
+    transform: translateX(100%); 
+    // when not translated it was causing automatic link clicks on mobile/touch devices.
+    border-radius: 10px;
+    background-color: rgba($background-color-main, 0.8);
+    z-index: 50;
     .project-heading {
         text-transform: uppercase;
         margin: 3% 0;

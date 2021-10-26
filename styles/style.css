@@ -649,23 +649,16 @@ PROJECTS
 }
 .project-content .project-container:hover .project-info {
   visibility: visible;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
   opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
 .project-info {
-  visibility: hidden;
-  opacity: 0;
-  padding: 5%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 10px;
-  background-color: rgba(17, 20, 24, 0.8);
-  z-index: 50;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -676,6 +669,19 @@ PROJECTS
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 5%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  border-radius: 10px;
+  background-color: rgba(17, 20, 24, 0.8);
+  z-index: 50;
 }
 .project-info .project-heading {
   text-transform: uppercase;
