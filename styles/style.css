@@ -647,6 +647,12 @@ PROJECTS
   position: relative;
   margin: 5% 0;
 }
+.project-content .project-container:hover .project-info {
+  visibility: visible;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
 
 .project-info {
   visibility: hidden;
@@ -998,13 +1004,6 @@ footer p {
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
     color: #0dcaf0;
-  }
-
-  .project-container:hover .project-info {
-    visibility: visible;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s;
-    opacity: 1;
   }
 
   .project-text .project-link:hover {

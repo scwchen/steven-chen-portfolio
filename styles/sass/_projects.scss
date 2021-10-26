@@ -9,6 +9,11 @@ PROJECTS
     .project-container {
         position: relative;
         margin: 5% 0;
+        &:hover .project-info {
+            visibility: visible;
+            transition: opacity 0.3s;
+            opacity: 1;
+        }
     }
 }
 
