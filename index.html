@@ -46,8 +46,8 @@
                                     class="fab fa-medium-m"></i></a></li>
                     </ul>
                 </div>
-                <button class="hamburger-menu" id="hamburger-menu">
-                    <i class="fas fa-bars"></i>
+                <button class="menu-button" aria-label="Menu Closed">
+                    <div class="hamburger-menu" aria-hidden="true"></div>
                 </button>
             </div>
 
@@ -315,15 +315,15 @@
                                 <h4>Follow Me</h4>
                                 <ul class="follow-list">
                                     <li><a href="https://www.linkedin.com/in/scwchen/" rel="noopener noreferrer"><i
-                                                class="fab fa-linkedin-in"></i></a></li>
+                                                class="fab fa-linkedin-in" aria-label="Follow my Linked In"></i></a></li>
                                     <li><a href="https://github.com/scwchen" rel="noopener noreferrer"><i
-                                                class="fab fa-github"></i></a>
+                                                class="fab fa-github" aria-label="Follow my Git Hub"></i></a>
                                     </li>
                                     <li><a href="https://twitter.com/schen05" rel="noopener noreferrer"><i
-                                                class="fab fa-twitter"></i></a>
+                                                class="fab fa-twitter" aria-label="Follow my Twitter"></i></a>
                                     </li>
                                     <li><a href="https://medium.com/@scwchen" rel="noopener noreferrer"><i
-                                                class="fab fa-medium-m"></i></a>
+                                                class="fab fa-medium-m" aria-label="Follow my Medium"></i></a>
                                     </li>
                                 </ul>
                             </div> <!-- end of follow-me -->
@@ -331,7 +331,7 @@
                             <div class="book-appt">
                                 <h4>Book with Me</h4>
                                 <a href="https://calendly.com/scwchen" rel="noopener noreferrer"><i
-                                        class="fas fa-calendar"></i>Calendly</a>
+                                        class="fas fa-calendar" aria-label="Book with Calendly"></i>Calendly</a>
                             </div>
                         </div>
 
@@ -391,14 +391,12 @@
         <!-- Navigation button -->
         <div class="nav-button">
             <a class="to-top hidden" href="#home">
-                <i class="fas fa-chevron-up"></i>
+                <i class="fas fa-chevron-up" aria-label="Back to Top"></i>
             </a>
-            <span class="nav-button-tooltip">Back to Top</span>
+            <span class="nav-button-tooltip" aria-hidden="true">Back to Top</span>
         </div>
 
     </div> <!-- end of wrapper-main-content -->
-
-
 
     <!-- JS scripts -->
     <script src="./aos.js"></script>

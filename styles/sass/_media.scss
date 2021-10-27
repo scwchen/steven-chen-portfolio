@@ -44,8 +44,10 @@
         }
     }
 
-    .hamburger-menu {
-        display: block;
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .wrapper-main-content {

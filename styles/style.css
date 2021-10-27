@@ -490,18 +490,8 @@ header {
   height: 100vh;
 }
 .header-nav-container .header-nav {
-  -webkit-transition: max-height 0.3s ease-out;
-  transition: max-height 0.3s ease-out;
-}
-
-.hamburger-menu {
-  display: none;
-  padding: 0;
-  width: 40px;
-  height: 40px;
-  border: none;
-  color: white;
-  font-size: 1.2rem;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .header-nav-hero h1 {
@@ -546,6 +536,67 @@ header {
 }
 .header-nav-favicon-list li {
   margin: 0.5rem;
+}
+
+/* ===========================================
+MENU BUTTON
+=========================================== */
+.menu-button {
+  display: none;
+  position: relative;
+  padding: 0;
+  width: 35px;
+  height: 35px;
+  border: none;
+  color: white;
+}
+
+.hamburger-menu {
+  width: 35px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 35px;
+  height: 4px;
+  background: white;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu::before {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.hamburger-menu::after {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.menu-button.open .hamburger-menu {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-button.open .hamburger-menu::before {
+  -webkit-transform: rotate(45deg) translate(35px, -35px);
+          transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-button.open .hamburger-menu::after {
+  -webkit-transform: rotate(-45deg) translate(35px, 35px);
+          transform: rotate(-45deg) translate(35px, 35px);
 }
 
 /* ===========================================
@@ -930,8 +981,16 @@ footer p {
     background-color: rgba(17, 20, 24, 0.8);
   }
 
-  .hamburger-menu {
-    display: block;
+  .menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .wrapper-main-content {

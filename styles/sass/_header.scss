@@ -21,18 +21,8 @@ header {
     justify-content: space-between;
     height: 100vh;
     .header-nav {
-        transition: max-height 0.3s ease-out;
+        transition: max-height 0.3s ease-in-out;
     }
-}
-
-.hamburger-menu {
-    display: none;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    border: none;
-    color: white;
-    font-size: 1.2rem;
 }
 
 .header-nav-hero {
@@ -69,4 +59,49 @@ header {
     li {
         margin: 0.5rem;
     }
+}
+
+/* ===========================================
+MENU BUTTON
+=========================================== */
+
+.menu-button {
+    display: none;
+    position: relative;
+    padding: 0;
+    width: $hamburger-patty;
+    height: $hamburger-patty;
+    border: none;
+    color: white;
+}
+
+.hamburger-menu {
+    @include hamburger;
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    @include hamburger;
+}
+
+.hamburger-menu::before {
+    transform: translateY(-10px);
+}
+.hamburger-menu::after {
+    transform: translateY(10px);
+}
+
+.menu-button.open .hamburger-menu {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-button.open .hamburger-menu::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-button.open .hamburger-menu::after {
+    transform: rotate(-45deg) translate(35px, 35px);
 }

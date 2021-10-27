@@ -10,3 +10,13 @@ $font-color-light-text: #dee3e4;
 $accent-color: #0dcaf0;
 $heading-color-light: rgba(163, 163, 163, 0.2);
 $input-color: #232a31;
+
+$hamburger-patty: 35px;
+
+@mixin hamburger {
+    width: $hamburger-patty;
+    height: 4px;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}

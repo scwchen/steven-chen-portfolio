@@ -75,7 +75,7 @@ app.skillContainerListener = () => {
 
 app.addWindowEventListeners = () => {
     const toTop = document.querySelector('.to-top');
-    
+
     window.addEventListener('scroll', () => {
         if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
             toTop.classList.remove('hidden');
@@ -129,17 +129,19 @@ app.menuItemEventListener = () => {
 }
 // Adding event listener to the show menu on mobile
 app.menuEventListener = () => {
-    const menuButton = document.querySelector('.hamburger-menu');
-    const menuIcon = document.querySelector('.hamburger-menu i')
+    const menuButton = document.querySelector('.menu-button');
 
+    let menuOpen = false;
 
     menuButton.addEventListener('click', () => {
-        if (menuIcon.classList.contains('fa-bars')) {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-times');
+        if (!menuOpen) {
+            menuButton.classList.add('open');
+            menuButton.ariaLabel = "Menu Open";
+            menuOpen = true;
         } else {
-            menuIcon.classList.add('fa-bars');
-            menuIcon.classList.remove('fa-times');
+            menuButton.classList.remove('open');
+            menuButton.ariaLabel = "Menu Closed";
+            menuOpen = false;
         }
         app.menuShow();
     });
