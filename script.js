@@ -10,6 +10,8 @@ app.sIndex = 0;
 app.textPosition = 0;
 app.speed = 75;
 app.typedHeading = document.querySelector('.typewriter');
+app.menuOpen = false;
+app.menuButton = document.querySelector('.menu-button');
 
 app.init = () => {
 
@@ -112,39 +114,30 @@ app.addWindowEventListeners = () => {
 app.menuShow = () => {
     const headerNav = document.querySelector('.header-nav')
 
-    if (headerNav.style.maxHeight) {
-        headerNav.style.maxHeight = null;
-    } else {
+    if (!app.menuOpen) {
+        app.menuButton.classList.add('open');
+        app.menuButton.ariaLabel = "Menu Open";
+        app.menuOpen = true;
         headerNav.style.maxHeight = `${headerNav.scrollHeight}px`;
+    } else {
+        app.menuButton.classList.remove('open');
+        app.menuButton.ariaLabel = "Menu Closed";
+        app.menuOpen = false;
+        headerNav.style.maxHeight = null;
     }
+
 }
 
 // Adding event listen to hide the menu when any of the nav list items are selected
 app.menuItemEventListener = () => {
     const navList = document.querySelectorAll('.header-nav-list a');
-
     navList.forEach((navItem) => {
         navItem.addEventListener('click', app.menuShow);
     });
 }
 // Adding event listener to the show menu on mobile
 app.menuEventListener = () => {
-    const menuButton = document.querySelector('.menu-button');
-
-    let menuOpen = false;
-
-    menuButton.addEventListener('click', () => {
-        if (!menuOpen) {
-            menuButton.classList.add('open');
-            menuButton.ariaLabel = "Menu Open";
-            menuOpen = true;
-        } else {
-            menuButton.classList.remove('open');
-            menuButton.ariaLabel = "Menu Closed";
-            menuOpen = false;
-        }
-        app.menuShow();
-    });
+    app.menuButton.addEventListener('click', app.menuShow);
 }
 
 AOS.init();
