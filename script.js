@@ -111,19 +111,21 @@ app.addWindowEventListeners = () => {
 //     darkToggle.addEventListener('click', app.toggleDarkMode);
 // }
 
-app.menuShow = () => {
+app.menuShow = (target) => {
     const headerNav = document.querySelector('.header-nav')
 
-    if (!app.menuOpen) {
-        app.menuButton.classList.add('open');
-        app.menuButton.ariaLabel = "Menu Open";
-        app.menuOpen = true;
-        headerNav.style.maxHeight = `${headerNav.scrollHeight}px`;
-    } else {
-        app.menuButton.classList.remove('open');
-        app.menuButton.ariaLabel = "Menu Closed";
-        app.menuOpen = false;
-        headerNav.style.maxHeight = null;
+    if (window.innerWidth <= 980) {
+        if (!app.menuOpen) {
+            app.menuButton.classList.add('open');
+            app.menuButton.ariaLabel = "Menu Open";
+            app.menuOpen = true;
+            headerNav.style.maxHeight = `${headerNav.scrollHeight}px`;
+        } else {
+            app.menuButton.classList.remove('open');
+            app.menuButton.ariaLabel = "Menu Closed";
+            app.menuOpen = false;
+            headerNav.style.maxHeight = null;
+        }
     }
 
 }
