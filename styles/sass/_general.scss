@@ -14,7 +14,7 @@ html {
 body {
     font-size: 1rem;
     color: white;
-    background-color: $background-color-secondary;
+    background-color: $background-color-main;
 }
 
 .header,
@@ -59,10 +59,11 @@ img {
 
 section {
     position: relative;
-    &.tertiary {
-        background-color: $background-color-tertiary;
-    }
     padding: 3rem 0;
+}
+
+.secondary {
+    background-color: $background-color-secondary;
 }
 
 .accent-color {
@@ -151,40 +152,6 @@ section {
 button {
     background: none;
     cursor: pointer;
-}
-
-.skills-content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    gap: 0 3%;
-    margin: 0 auto;
-}
-
-.skill-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 3% 0;
-    // max-width: 250px;
-    transition: all 0.5s;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    &:hover {
-        transform: scale(1.1);
-        border-color: $accent-color;
-        color: $accent-color;
-    }
-    i {
-        position: relative;
-        font-size: 4rem;
-        padding: 1.5rem;
-    }
-    p {
-        text-align: center;
-        padding: 0.5rem;
-    }
 }
 
 .blinker {

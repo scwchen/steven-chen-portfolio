@@ -304,7 +304,8 @@ section {
   position: relative;
   padding: 3rem 0;
 }
-section.tertiary {
+
+.secondary {
   background-color: #343A40;
 }
 
@@ -349,7 +350,7 @@ section.tertiary {
 }
 
 * {
-  scrollbar-color: #0dcaf0 #111418;
+  scrollbar-color: #0dcaf0 #212529;
 }
 
 *::-webkit-scrollbar {
@@ -357,13 +358,13 @@ section.tertiary {
 }
 
 *::-webkit-scrollbar-track {
-  background: #111418;
+  background: #212529;
 }
 
 *::-webkit-scrollbar-thumb {
   background-color: #0dcaf0;
   border-radius: 100vw;
-  border: 3px solid #111418;
+  border: 3px solid #212529;
 }
 
 .hollow-button {
@@ -396,50 +397,6 @@ section.tertiary {
 button {
   background: none;
   cursor: pointer;
-}
-
-.skills-content {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  gap: 0 3%;
-  margin: 0 auto;
-}
-
-.skill-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 3% 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  border: 2px solid #fff;
-  border-radius: 10px;
-}
-.skill-container:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  border-color: #0dcaf0;
-  color: #0dcaf0;
-}
-.skill-container i {
-  position: relative;
-  font-size: 4rem;
-  padding: 1.5rem;
-}
-.skill-container p {
-  text-align: center;
-  padding: 0.5rem;
 }
 
 .blinker {
@@ -685,6 +642,50 @@ ABOUT
   display: inline-block;
 }
 
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 0 3%;
+  margin: 0 auto;
+}
+
+.skill-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3% 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+.skill-container:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+}
+.skill-container i {
+  position: relative;
+  font-size: 4rem;
+  padding: 1.5rem;
+}
+.skill-container p {
+  text-align: center;
+  padding: 0.5rem;
+}
+
 /* ===========================================
 PROJECTS
 =========================================== */
@@ -731,7 +732,7 @@ PROJECTS
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   border-radius: 10px;
-  background-color: rgba(17, 20, 24, 0.8);
+  background-color: rgba(33, 37, 41, 0.8);
   z-index: 50;
 }
 .project-info .project-heading {
@@ -978,7 +979,7 @@ footer p {
     min-width: 250px;
     text-align: center;
     margin: 1px;
-    background-color: rgba(17, 20, 24, 0.8);
+    background-color: rgba(33, 37, 41, 0.8);
   }
 
   .menu-button {
