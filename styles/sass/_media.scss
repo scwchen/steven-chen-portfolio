@@ -29,6 +29,11 @@
         }
     }
 
+    main, footer {
+        width: 100%;
+        left: 0;
+    }
+
     .header-nav {
         position: absolute;
         z-index: 100;

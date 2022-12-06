@@ -260,6 +260,12 @@ body {
   background-color: #212529;
 }
 
+main, footer {
+  position: relative;
+  width: calc(100% - 250px);
+  left: 250px;
+}
+
 .header,
 .home {
   color: #fff;
@@ -962,6 +968,10 @@ footer p {
   }
   .header-nav-hero img {
     display: none;
+  }
+  main, footer {
+    width: 100%;
+    left: 0;
   }
   .header-nav {
     position: absolute;

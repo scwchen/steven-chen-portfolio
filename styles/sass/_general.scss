@@ -17,6 +17,12 @@ body {
     background-color: $background-color-main;
 }
 
+main, footer {
+    position: relative;
+    width: calc(100% - 250px);
+    left: 250px;
+}
+
 .header,
 .home {
     color: $font-color-main;
