@@ -15,418 +15,426 @@
 </head>
 
 <body>
-        <header>
+    <header>
 
-            <div class="header-nav-container">
+        <div class="header-nav-container">
 
-                <div class="header-nav-hero">
-                    <img src="./assets/hero.webp" alt="Steven Chen, front end web developer.">
-                    <h1 class="logo"><span class="mobile-logo">SC</span><span class="desktop-logo">Steven Chen</span>
-                    </h1>
+            <div class="header-nav-hero">
+                <img src="./assets/hero.webp" alt="Steven Chen, front end web developer.">
+                <h1 class="logo"><span class="mobile-logo">SC</span><span class="desktop-logo">Steven Chen</span>
+                </h1>
+            </div>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-nav-favicon">
+                <ul class="header-nav-favicon-list">
+                    <li><a href="https://www.linkedin.com/in/scwchen/" rel="noopener noreferrer"
+                            aria-label="Follow my Linked In"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/scwchen" rel="noopener noreferrer" aria-label="Follow my Git Hub"><i
+                                class="fab fa-github"></i></a></li>
+                    <li><a href="https://twitter.com/schen05" rel="noopener noreferrer"
+                            aria-label="Follow my Twitter"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://medium.com/@scwchen" rel="noopener noreferrer" aria-label="Follow my Medium"><i
+                                class="fab fa-medium-m"></i></a></li>
+                </ul>
+            </div>
+            <button class="menu-button" aria-label="Menu Closed">
+                <div class="hamburger-menu" aria-hidden="true"></div>
+            </button>
+        </div>
+
+    </header>
+    <!-- end of header -->
+
+    <main>
+        <section class="home" id="home">
+            <div class="overlay">
+                <div class="home-heading-container wrapper">
+                    <p>Welcome</p>
+                    <h2 class="typewriter"></h2>
+                    <h2 class="reduced-motion-home">I am Steven Chen</h2>
+                    <p>based in Toronto, Canada</p>
+                    <a class="hire-button hollow-button" href="#contact">Hire Me</a>
                 </div>
-                <nav class="header-nav">
-                    <ul class="header-nav-list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="header-nav-favicon">
-                    <ul class="header-nav-favicon-list">
-                        <li><a href="https://www.linkedin.com/in/scwchen/" rel="noopener noreferrer"
-                                aria-label="Follow my Linked In"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="https://github.com/scwchen" rel="noopener noreferrer"
-                                aria-label="Follow my Git Hub"><i class="fab fa-github"></i></a></li>
-                        <li><a href="https://twitter.com/schen05" rel="noopener noreferrer"
-                                aria-label="Follow my Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://medium.com/@scwchen" rel="noopener noreferrer"
-                                aria-label="Follow my Medium"><i class="fab fa-medium-m"></i></a></li>
-                    </ul>
+
+            </div>
+        </section>
+        <!-- end of home -->
+
+        <section class="about" id="about">
+            <div class="wrapper">
+                <div class="heading-container">
+                    <h2 class="section-heading">About Me</h2>
+                    <p class="section-sub-heading">Get to Know Me</p>
                 </div>
-                <button class="menu-button" aria-label="Menu Closed">
-                    <div class="hamburger-menu" aria-hidden="true"></div>
-                </button>
+                <div class="about-text" data-aos="fade-right">
+                    <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
+                    <p class="text-content">I am based in Toronto, ON and am a recent graduate from <a
+                            class="accent-color" href="https://junocollege.com/" rel="noopener noreferrer">Juno
+                            College</a>'s Immersive
+                        Web Development Bootcamp.</p>
+                    <p>
+                        Before my shift to Web Development I worked several years in technical support. I learned a
+                        lot from the industry but on my career change journey I fell in love with code. <a
+                            class="accent-color"
+                            href="https://scwchen.medium.com/finding-my-way-and-web-developing-a-love-for-creativity-80db2a4cf0e1"
+                            rel="noopener noreferrer">Read more about it here!</a>
+                    </p>
+
+                    <p>I pride myself on creating beautiful, responsive, and accessible content, my insatiable
+                        curiosity, and a lifelong desire to learn.</p>
+
+                    <p>When I am not coding I love to follow the Toronto Raptors and the Winnipeg Jets (sorry Leafs
+                        fans). I also have an unhealthy <a class="accent-color" href="https://www.movieswithsteve.com/"
+                            rel="noopener noreferrer">obsession with
+                            movies</a>.</p>
+                    <div class="resume-container">
+                        <a class="resume-button hollow-button" target="_blank"
+                            href="./resume/Steven Chen Web Developer Resume.pdf" rel="noopener noreferrer">Resume</a>
+                    </div>
+                </div>
             </div>
 
-        </header> <!-- end of header -->
+        </section>
+        <!-- end of about -->
 
-        <main>
-            <section class="home" id="home">
-                <div class="overlay">
-                    <div class="home-heading-container wrapper">
-                        <p>Welcome</p>
-                        <h2 class="typewriter"></h2>
-                        <h2 class="reduced-motion-home">I am Steven Chen</h2>
-                        <p>based in Toronto, Canada</p>
-                        <a class="hire-button hollow-button" href="#contact">Hire Me</a>
-                    </div>
+        <section class="skills secondary" id="skills">
+            <li class="wrapper">
+                <div class="heading-container">
+                    <h2 class="section-heading">Skills</h2>
+                    <p class="section-sub-heading">My Toolkit</p>
+                </div>
+                <ul class="skills-content" data-aos="fade-up-left">
+                    <li class="skill-container">
+                        <i class="devicon-html5-plain"></i>
+                        <p>HTML</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-css3-plain"></i>
+                        <p>CSS</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-javascript-plain"></i>
+                        <p>JavaScript</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-jquery-plain"></i>
+                        <p>jQuery</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-sass-original"></i>
+                        <p>SASS</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-react-original"></i>
+                        <p>React</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-firebase-plain"></i>
+                        <p>Firebase</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-microsoftsqlserver-plain colored"></i>
+                        <p>SQL Server</p>
+                    </li>
+
+                    <li class="skill-container">
+                        <i class="devicon-github-original"></i>
+                        <p>GitHub</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-git-plain"></i>
+                        <p>Git</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="fas fa-mobile-alt"></i>
+                        <p>Responsive Design</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="fas fa-universal-access"></i>
+                        <p>Accessibility</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="fas fa-user-friends"></i>
+                        <p>Pair/Peer Programming</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-salesforce-plain"></i>
+                        <p>Salesforce Administrator</p>
+                    </li>
+                </ul>
+                <!-- end of skills-content -->
 
                 </div>
-            </section> <!-- end of home -->
+        </section>
+        <!-- end of skills -->
 
-            <section class="about" id="about">
-                <div class="wrapper">
-                    <div class="heading-container">
-                        <h2 class="section-heading">About Me</h2>
-                        <p class="section-sub-heading">Get to Know Me</p>
-                    </div>
-                    <div class="about-text" data-aos="fade-right">
-                        <h3>I'm <span class="accent-color">Steven Chen</span>, a Front-End Web Developer</h3>
-                        <p class="text-content">I am based in Toronto, ON and am a recent graduate from <a
-                                class="accent-color" href="https://junocollege.com/" rel="noopener noreferrer">Juno
-                                College</a>'s Immersive
-                            Web Development Bootcamp.</p>
-                        <p>
-                            Before my shift to Web Development I worked several years in technical support. I learned a
-                            lot from the industry but on my career change journey I fell in love with code. <a
-                                class="accent-color"
-                                href="https://scwchen.medium.com/finding-my-way-and-web-developing-a-love-for-creativity-80db2a4cf0e1"
-                                rel="noopener noreferrer">Read more about it here!</a>
-                        </p>
-
-                        <p>I pride myself on creating beautiful, responsive, and accessible content, my insatiable
-                            curiosity, and a lifelong desire to learn.</p>
-
-                        <p>When I am not coding I love to follow the Toronto Raptors and the Winnipeg Jets (sorry Leafs
-                            fans). I also have an unhealthy <a class="accent-color"
-                                href="https://www.movieswithsteve.com/" rel="noopener noreferrer">obsession with
-                                movies</a>.</p>
-                        <div class="resume-container">
-                            <a class="resume-button hollow-button" target="_blank"
-                                href="./resume/Steven Chen Web Developer Resume.pdf"
-                                rel="noopener noreferrer">Resume</a>
-                        </div>
-                    </div>
+        <section class="skills-learning">
+            <div class="wrapper">
+                <div class="heading-container">
+                    <h2 class="section-heading">Skills</h2>
+                    <p class="section-sub-heading">Learning</p>
                 </div>
+                <ul class="skills-content" data-aos="fade-up-left">
+                    <li class="skill-container">
+                        <i class="devicon-java-plain"></i>
+                        <p>Java</p>
+                    </li>
+                    <li class="skill-container">
+                        <i class="devicon-salesforce-plain"></i>
+                        <p>Salesforce Health Cloud</p>
+                    </li>
 
-            </section> <!-- end of about -->
-
-            <section class="skills secondary" id="skills">
-                <li class="wrapper">
-                    <div class="heading-container">
-                        <h2 class="section-heading">Skills</h2>
-                        <p class="section-sub-heading">My Toolkit</p>
-                    </div>
-                    <ul class="skills-content" data-aos="fade-up-left">
-                        <li class="skill-container">
-                            <i class="devicon-html5-plain"></i>
-                            <p>HTML</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-css3-plain"></i>
-                            <p>CSS</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-javascript-plain"></i>
-                            <p>JavaScript</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-jquery-plain"></i>
-                            <p>jQuery</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-sass-original"></i>
-                            <p>SASS</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-react-original"></i>
-                            <p>React</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-firebase-plain"></i>
-                            <p>Firebase</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-microsoftsqlserver-plain colored"></i>
-                            <p>SQL Server</p>
-                        </li>
-
-                        <li class="skill-container">
-                            <i class="devicon-github-original"></i>
-                            <p>GitHub</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-git-plain"></i>
-                            <p>Git</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="fas fa-mobile-alt"></i>
-                            <p>Responsive Design</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="fas fa-universal-access"></i>
-                            <p>Accessibility</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="fas fa-user-friends"></i>
-                            <p>Pair/Peer Programming</p>
-                        </li>
-                    </ul> <!-- end of skills-content -->
-
-                </div>
-            </section> <!-- end of skills -->
-
-            <section class="skills-learning">
-                <div class="wrapper">
-                    <div class="heading-container">
-                        <h2 class="section-heading">Skills</h2>
-                        <p class="section-sub-heading">Learning</p>
-                    </div>
-                    <ul class="skills-content" data-aos="fade-up-left">
-                        <li class="skill-container">
-                            <i class="devicon-java-plain"></i>
-                            <p>Java</p>
-                        </li>
-                        <li class="skill-container">
-                            <i class="devicon-salesforce-plain colored"></i>
-                            <p>Salesforce Admin</p>
-                        </li>
-                        <!-- <li class="skill-container">
+                    <!-- <li class="skill-container">
                             <i class="devicon-microsoftsqlserver-plain"></i>
                             <p>SQL Server</p>
                         </li> -->
-                    </ul> <!-- end of skills-content -->
+                </ul> <!-- end of skills-content -->
+            </div>
+        </section> <!-- end of skills-learning -->
+
+        <section class="projects secondary" id="projects">
+            <div class="wrapper">
+                <div class="heading-container">
+                    <h2 class="section-heading">Projects</h2>
+                    <p class="section-sub-heading">My Work</p>
                 </div>
-            </section> <!-- end of skills-learning -->
-            
-            <section class="projects secondary" id="projects">
-                <div class="wrapper">
-                    <div class="heading-container">
-                        <h2 class="section-heading">Projects</h2>
-                        <p class="section-sub-heading">My Work</p>
-                    </div>
-                    <div class="project-content">
+                <div class="project-content">
 
-                        <!-- Project 4 -->
-                        <div class="project-container" data-aos="fade-up">
+                    <!-- Project 4 -->
+                    <div class="project-container" data-aos="fade-up">
 
-                            <div class="project-info">
+                        <div class="project-info">
 
-                                <h3 class="project-heading">Routinely</h3>
+                            <h3 class="project-heading">Routinely</h3>
 
-                                <div class="project-text">
-                                    <div class="project-summary">
-                                        <p>Having some trouble keeping on track when it comes to habits or routines
-                                            you're trying to form? Me too. I created Routinely to keep me accountable
-                                            when I see days that I haven't completed a task and it motivates to
-                                            persevere. Can you make a habit of it?</p>
-                                        <p class="tool-list">HTML | CSS | React | Firebase</p>
-                                        <div class="project-links">
-                                            <a class="project-link" href="https://routinely-tracker.netlify.app/"
-                                                rel="noopener noreferrer">Live</a>
-                                            <a class="project-link" href="https://github.com/scwchen/routinely"
-                                                rel="noopener noreferrer">Repo</a>
-                                        </div>
+                            <div class="project-text">
+                                <div class="project-summary">
+                                    <p>Having some trouble keeping on track when it comes to habits or routines
+                                        you're trying to form? Me too. I created Routinely to keep me accountable
+                                        when I see days that I haven't completed a task and it motivates to
+                                        persevere. Can you make a habit of it?</p>
+                                    <p class="tool-list">HTML | CSS | React | Firebase</p>
+                                    <div class="project-links">
+                                        <a class="project-link" href="https://routinely-tracker.netlify.app/"
+                                            rel="noopener noreferrer">Live</a>
+                                        <a class="project-link" href="https://github.com/scwchen/routinely"
+                                            rel="noopener noreferrer">Repo</a>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="project-image">
-                                <img src="./assets/routinely.webp" alt="Routinely. Solo React and Fire base project.">
-                            </div>
-                        </div> <!-- end of Project 4 -->
-
-                        <!-- Project 1 -->
-                        <div class="project-container" data-aos="fade-up">
-                            <div class="project-info">
-
-                                <h3 class="project-heading">Beachstays</h3>
-
-                                <div class="project-text">
-                                    <div class="project-summary">
-                                        <p>A Multi-page PSD Conversion project for a luxury beach resort. Designed with
-                                            responsiveness and accessibility in mind. Included an image carousel using
-                                            JavaScript.</p>
-                                        <p class="tool-list">HTML | CSS | JavaScript</p>
-
-                                        <div class="project-links">
-                                            <a class="project-link" href="https://beachstays-scwchen.netlify.app/"
-                                                rel="noopener noreferrer">Live</a>
-                                            <a class="project-link" href="https://github.com/scwchen/beachstays"
-                                                rel="noopener noreferrer">Repo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-image">
-                                <img src="./assets/beachstays.webp" alt="Beachstays P S D conversion project.">
-                            </div>
-                        </div> <!-- end of Project 1 -->
-
-                        <!-- Project 2 -->
-                        <div class="project-container" data-aos="fade-up">
-                            <div class="project-info">
-
-                                <h3 class="project-heading">Cineplus</h3>
-
-
-                                <div class="project-text">
-                                    <div class="project-summary">
-                                        <p>Not sure what to watch tonight? Cineplus can help with that. Give it a few
-                                            parameters like genre and release year and you'll be watching in no time!
-
-                                            Powered by the <a class="accent-color"
-                                                href="https://developers.themoviedb.org/3"
-                                                rel="noopener noreferrer">TMDB</a> API and Lovingly coded in pairs with
-                                            <a class="accent-color" href="https://www.zeynabmanafova.com/"
-                                                rel="noopener noreferrer">Zeynab
-                                                Manafova</a>.
-                                        </p>
-                                        <p class="tool-list">HTML | CSS | JavaScript | REST API</p>
-                                        <div class="project-links">
-
-                                            <a class="project-link" href="https://cineplus-juno.netlify.app/"
-                                                rel="noopener noreferrer">Live</a>
-                                            <a class="project-link"
-                                                href="https://github.com/steven-zeynab-juno-project-2/cineplus"
-                                                rel="noopener noreferrer">Repo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="project-image">
-                                <img src="./assets/cineplus.webp" alt="Cineplus. Paired Java Script project.">
-                            </div>
-                        </div> <!-- end of Project 2 -->
-
-                        <!-- Project 3 -->
-                        <div class="project-container" data-aos="fade-up">
-                            <div class="project-info">
-
-                                <h3 class="project-heading">Battle Rockets</h3>
-
-
-                                <div class="project-text">
-                                    <div class="project-summary">
-                                        <p>A spaced themed recreation of the classic game of Battleship. Created using
-                                            React and Firebase to
-                                            enable persistent two player functionality. Grab a friend and give it a
-                                            play! Coded with teammates <a class="accent-color"
-                                                href="https://www.maximbelomestnov.com/" rel="noopener noreferrer">Maxim
-                                                Belomestnov</a> and <a class="accent-color"
-                                                href="https://www.azalialoeciano.com" rel="noopener noreferrer">Azalia
-                                                Loeciano</a>.</p>
-                                        <p class="tool-list">HTML | CSS | React | Firebase</p>
-                                        <div class="project-links">
-
-                                            <a class="project-link" href="https://battle-rockets.netlify.app/"
-                                                rel="noopener noreferrer">Live</a>
-                                            <a class="project-link"
-                                                href="https://github.com/stazma-battlerockets/battle-rockets"
-                                                rel="noopener noreferrer">Repo</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="project-image">
-                                <img src="./assets/battlerockets.webp"
-                                    alt="Battle Rockets. Group project using React and Firebase.">
-                            </div>
-                        </div> <!-- end of Project 3 -->
-
-                    </div>
-                </div>
-
-            </section> <!-- end of projects -->
-
-            <!-- CONTACT FORM -->
-            <section class="contact " id="contact">
-                <div class="wrapper">
-                    <div class="heading-container">
-                        <h2 class="section-heading">Contact</h2>
-                        <p class="section-sub-heading">Get In Touch</p>
-                    </div>
-                    <div class="contact-content" data-aos="zoom-out-down">
-
-                        <div class="contact-me">
-                            <div class="follow-me">
-                                <h4>Follow Me</h4>
-                                <ul class="follow-list">
-                                    <li><a href="https://www.linkedin.com/in/scwchen/" rel="noopener noreferrer"
-                                            aria-label="Follow my Linked In"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li><a href="https://github.com/scwchen" rel="noopener noreferrer"
-                                            aria-label="Follow my Git Hub"><i class="fab fa-github"></i></a>
-                                    </li>
-                                    <li><a href="https://twitter.com/schen05" rel="noopener noreferrer"
-                                            aria-label="Follow my Twitter"><i class="fab fa-twitter"></i></a>
-                                    </li>
-                                    <li><a href="https://medium.com/@scwchen" rel="noopener noreferrer"
-                                            aria-label="Follow my Medium"><i class="fab fa-medium-m"></i></a>
-                                    </li>
-                                </ul>
-                            </div> <!-- end of follow-me -->
-
-                            <div class="book-appt">
-                                <h4>Book with Me</h4>
-                                <a href="https://calendly.com/scwchen" rel="noopener noreferrer"><i
-                                        class="fas fa-calendar" aria-label="Book with Calendly"></i>Calendly</a>
                             </div>
                         </div>
 
-                        <div class="contact-input">
+                        <div class="project-image">
+                            <img src="./assets/routinely.webp" alt="Routinely. Solo React and Fire base project.">
+                        </div>
+                    </div> <!-- end of Project 4 -->
 
-                            <form id="contact-form" class="contact-form" name="simple-contact-form"
-                                accept-charset="utf-8" action="https://formspree.io/f/xqkwobzp" method="post">
+                    <!-- Project 1 -->
+                    <div class="project-container" data-aos="fade-up">
+                        <div class="project-info">
 
-                                <fieldset id="contact-form-inputs">
-                                    <p>Message Me</p>
-                                    <div class="name-container">
-                                        <label class="sr-only" for="full-name">Name</label>
-                                        <input type="text" name="name" id="full-name" placeholder="First and Last Name"
-                                            required>
-                                    </div>
-                                    <div class="email-container">
-                                        <label class="sr-only" for="email-address">Email Address</label>
-                                        <input type="email" name="_replyto" id="email-address"
-                                            placeholder="email@domain.com" required>
-                                    </div>
+                            <h3 class="project-heading">Beachstays</h3>
 
-                                    <div class="message-container">
-                                        <label class="sr-only" for="message">Message</label>
-                                        <textarea name="message" id="message" placeholder="Message" required></textarea>
+                            <div class="project-text">
+                                <div class="project-summary">
+                                    <p>A Multi-page PSD Conversion project for a luxury beach resort. Designed with
+                                        responsiveness and accessibility in mind. Included an image carousel using
+                                        JavaScript.</p>
+                                    <p class="tool-list">HTML | CSS | JavaScript</p>
+
+                                    <div class="project-links">
+                                        <a class="project-link" href="https://beachstays-scwchen.netlify.app/"
+                                            rel="noopener noreferrer">Live</a>
+                                        <a class="project-link" href="https://github.com/scwchen/beachstays"
+                                            rel="noopener noreferrer">Repo</a>
                                     </div>
-                                    <div class="submit-container">
-                                        <input type="hidden" name="_subject" id="email-subject"
-                                            value="Contact Form Submission">
-                                        <button class="submit-button solid-button" type="submit" value="Submit">Send
-                                            Message</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="./assets/beachstays.webp" alt="Beachstays P S D conversion project.">
+                        </div>
+                    </div> <!-- end of Project 1 -->
+
+                    <!-- Project 2 -->
+                    <div class="project-container" data-aos="fade-up">
+                        <div class="project-info">
+
+                            <h3 class="project-heading">Cineplus</h3>
+
+
+                            <div class="project-text">
+                                <div class="project-summary">
+                                    <p>Not sure what to watch tonight? Cineplus can help with that. Give it a few
+                                        parameters like genre and release year and you'll be watching in no time!
+
+                                        Powered by the <a class="accent-color"
+                                            href="https://developers.themoviedb.org/3"
+                                            rel="noopener noreferrer">TMDB</a> API and Lovingly coded in pairs with
+                                        <a class="accent-color" href="https://www.zeynabmanafova.com/"
+                                            rel="noopener noreferrer">Zeynab
+                                            Manafova</a>.
+                                    </p>
+                                    <p class="tool-list">HTML | CSS | JavaScript | REST API</p>
+                                    <div class="project-links">
+
+                                        <a class="project-link" href="https://cineplus-juno.netlify.app/"
+                                            rel="noopener noreferrer">Live</a>
+                                        <a class="project-link"
+                                            href="https://github.com/steven-zeynab-juno-project-2/cineplus"
+                                            rel="noopener noreferrer">Repo</a>
                                     </div>
-                                </fieldset>
-                            </form>
-                        </div> <!-- end of contact-input -->
-                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-image">
+                            <img src="./assets/cineplus.webp" alt="Cineplus. Paired Java Script project.">
+                        </div>
+                    </div> <!-- end of Project 2 -->
+
+                    <!-- Project 3 -->
+                    <div class="project-container" data-aos="fade-up">
+                        <div class="project-info">
+
+                            <h3 class="project-heading">Battle Rockets</h3>
+
+
+                            <div class="project-text">
+                                <div class="project-summary">
+                                    <p>A spaced themed recreation of the classic game of Battleship. Created using
+                                        React and Firebase to
+                                        enable persistent two player functionality. Grab a friend and give it a
+                                        play! Coded with teammates <a class="accent-color"
+                                            href="https://www.maximbelomestnov.com/" rel="noopener noreferrer">Maxim
+                                            Belomestnov</a> and <a class="accent-color"
+                                            href="https://www.azalialoeciano.com" rel="noopener noreferrer">Azalia
+                                            Loeciano</a>.</p>
+                                    <p class="tool-list">HTML | CSS | React | Firebase</p>
+                                    <div class="project-links">
+
+                                        <a class="project-link" href="https://battle-rockets.netlify.app/"
+                                            rel="noopener noreferrer">Live</a>
+                                        <a class="project-link"
+                                            href="https://github.com/stazma-battlerockets/battle-rockets"
+                                            rel="noopener noreferrer">Repo</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-image">
+                            <img src="./assets/battlerockets.webp"
+                                alt="Battle Rockets. Group project using React and Firebase.">
+                        </div>
+                    </div> <!-- end of Project 3 -->
+
                 </div>
-
-            </section> <!-- end of contact -->
-
-        </main> <!-- end of main -->
-
-        <footer class="secondary">
-            <div class="wrapper">
-                <p>Created by Steven Chen 2021</p>
             </div>
-        </footer> <!-- end of footer -->
 
-        <!-- Add later for dark mode toggle -->
-        <!-- Toggle button -->
-        <!-- <div class="toggle-container">
+        </section> <!-- end of projects -->
+
+        <!-- CONTACT FORM -->
+        <section class="contact " id="contact">
+            <div class="wrapper">
+                <div class="heading-container">
+                    <h2 class="section-heading">Contact</h2>
+                    <p class="section-sub-heading">Get In Touch</p>
+                </div>
+                <div class="contact-content" data-aos="zoom-out-down">
+
+                    <div class="contact-me">
+                        <div class="follow-me">
+                            <h4>Follow Me</h4>
+                            <ul class="follow-list">
+                                <li><a href="https://www.linkedin.com/in/scwchen/" rel="noopener noreferrer"
+                                        aria-label="Follow my Linked In"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://github.com/scwchen" rel="noopener noreferrer"
+                                        aria-label="Follow my Git Hub"><i class="fab fa-github"></i></a>
+                                </li>
+                                <li><a href="https://twitter.com/schen05" rel="noopener noreferrer"
+                                        aria-label="Follow my Twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href="https://medium.com/@scwchen" rel="noopener noreferrer"
+                                        aria-label="Follow my Medium"><i class="fab fa-medium-m"></i></a>
+                                </li>
+                            </ul>
+                        </div> <!-- end of follow-me -->
+
+                        <div class="book-appt">
+                            <h4>Book with Me</h4>
+                            <a href="https://calendly.com/scwchen" rel="noopener noreferrer"><i class="fas fa-calendar"
+                                    aria-label="Book with Calendly"></i>Calendly</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-input">
+
+                        <form id="contact-form" class="contact-form" name="simple-contact-form" accept-charset="utf-8"
+                            action="https://formspree.io/f/xqkwobzp" method="post">
+
+                            <fieldset id="contact-form-inputs">
+                                <p>Message Me</p>
+                                <div class="name-container">
+                                    <label class="sr-only" for="full-name">Name</label>
+                                    <input type="text" name="name" id="full-name" placeholder="First and Last Name"
+                                        required>
+                                </div>
+                                <div class="email-container">
+                                    <label class="sr-only" for="email-address">Email Address</label>
+                                    <input type="email" name="_replyto" id="email-address"
+                                        placeholder="email@domain.com" required>
+                                </div>
+
+                                <div class="message-container">
+                                    <label class="sr-only" for="message">Message</label>
+                                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                                </div>
+                                <div class="submit-container">
+                                    <input type="hidden" name="_subject" id="email-subject"
+                                        value="Contact Form Submission">
+                                    <button class="submit-button solid-button" type="submit" value="Submit">Send
+                                        Message</button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div> <!-- end of contact-input -->
+                </div>
+            </div>
+
+        </section> <!-- end of contact -->
+
+    </main> <!-- end of main -->
+
+    <footer class="secondary">
+        <div class="wrapper">
+            <p>Created by Steven Chen 2021</p>
+        </div>
+    </footer>
+    <!-- end of footer -->
+
+    <!-- Add later for dark mode toggle -->
+    <!-- Toggle button -->
+    <!-- <div class="toggle-container">
             <button class="toggle-dark">
                 <i class="fas fa-moon chosen"></i>
                 <i class="fas fa-sun"></i>
             </button>
         </div> -->
 
-        <!-- Navigation button -->
-        <div class="nav-button">
-            <a class="to-top hidden" href="#home" aria-label="Back to Top">
-                <i class="fas fa-chevron-up"></i>
-            </a>
-            <span class="nav-button-tooltip" aria-hidden="true">Back to Top</span>
-        </div>
-
+    <!-- Navigation button -->
+    <div class="nav-button">
+        <a class="to-top hidden" href="#home" aria-label="Back to Top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <span class="nav-button-tooltip" aria-hidden="true">Back to Top</span>
     </div>
 
     <!-- JS scripts -->

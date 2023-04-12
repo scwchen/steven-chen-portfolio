@@ -5,7 +5,7 @@
 const app = {};
 
 // Typewriter variables
-app.strings = ["I am a Web Developer", "I am a Lifelong Learner", "I am a Movie Nerd", "I am Dark Mode", "I am a Web Developer", "I am Steven Chen"];
+app.strings = ["I am a Web Developer", "I am a Lifelong Learner", "I am a Movie Nerd", "I am Dark Mode", "I am a Salesforce Consultant", "I am a Web Developer", "I am Steven Chen"];
 app.sIndex = 0;
 app.textPosition = 0;
 app.speed = 75;

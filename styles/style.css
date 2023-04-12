@@ -714,6 +714,7 @@ PROJECTS
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
   transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  width: 100%;
 }
 
 .project-info {
@@ -737,6 +738,7 @@ PROJECTS
   padding: 5%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  width: 0;
   border-radius: 10px;
   background-color: rgba(33, 37, 41, 0.8);
   z-index: 50;
@@ -969,7 +971,8 @@ footer p {
   .header-nav-hero img {
     display: none;
   }
-  main, footer {
+  main,
+  footer {
     width: 100%;
     left: 0;
   }
@@ -1046,7 +1049,7 @@ footer p {
     font-size: 0.8rem;
   }
   .contact-form fieldset,
-.contact-me {
+  .contact-me {
     grid-template-columns: 1fr;
   }
 }
@@ -1068,7 +1071,7 @@ footer p {
     border-color: #0dcaf0;
   }
   .contact-me a:hover,
-.contact-me a:hover i {
+  .contact-me a:hover i {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
     color: #0dcaf0;
