@@ -12,6 +12,7 @@ app.speed = 75;
 app.typedHeading = document.querySelector('.typewriter');
 app.menuOpen = false;
 app.menuButton = document.querySelector('.menu-button');
+app.scrollHeight = 0;
 
 app.init = () => {
 
@@ -76,10 +77,11 @@ app.skillContainerListener = () => {
 };
 
 app.addWindowEventListeners = () => {
-    const toTop = document.querySelector('.to-top');
+    const toTop = document.querySelector('.to-Top');
 
     window.addEventListener('scroll', () => {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        app.scrollHeight = Math.max(window.scrollY, document.body.scrollTop, document.documentElement.scrollTop);
+        if (app.scrollHeight > 300) {
             toTop.classList.remove('hidden');
         } else {
             toTop.classList.add('hidden');
