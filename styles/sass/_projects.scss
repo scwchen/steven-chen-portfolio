@@ -32,8 +32,9 @@ PROJECTS
     bottom: 0;
     right: 0;
     padding: 5%;
-    transform: translateX(100%); 
+    transform: translateX(-100%); 
     // when not translated it was causing automatic link clicks on mobile/touch devices.
+    // Also had to move it in from the left side because the overflow width was acting funny.
     width: 0; 
     // mobile only it was causing the dreaded horizontal scroll.
     border-radius: 10px;

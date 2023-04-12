@@ -736,8 +736,8 @@ PROJECTS
   bottom: 0;
   right: 0;
   padding: 5%;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
   width: 0;
   border-radius: 10px;
   background-color: rgba(33, 37, 41, 0.8);
